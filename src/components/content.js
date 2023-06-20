@@ -10,19 +10,19 @@ function Content() {
             <div id="intro">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lacinia molestie. Vivamus iaculis, lectus a aliquam ultricies, velit lacus dapibus lectus, eu congue nibh diam quis urna. Suspendisse magna ante, sollicitudin in sapien id, placerat aliquam velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
                 <div className="navList">
-                    <a href="url">
+                    <a href="about">
                         &rarr;
                         <div>
                             About
                         </div>
                     </a>
-                    <a href="url">
+                    <a href="contact">
                         &rarr; 
                         <div>
                             Contact
                         </div>
                     </a>
-                    <a href="url">
+                    <a href="links">
                         &rarr; 
                         <div>
                             Links
