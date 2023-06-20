@@ -1,16 +1,19 @@
 #intro {
-    padding: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
     width: 50%;
     font-size: xx-large;
     font-weight: 300;
     text-align: left;
     line-height: 2rem;
+    margin-bottom: 10rem;
 }
 
 #picture img {
     object-fit: cover;
-    height: 75%;
+    height: 24rem;
     width: 100%;
+    object-position: bottom;
 }
 
 #picture {
@@ -21,13 +24,29 @@
 .navList {
     font-size: xx-large;
     text-align: left;
-    width: 60%;
     display: flex;
 }
 
-.navList div {
+.navList a {
     text-transform: lowercase;
-    margin-right: 1rem;
+    margin-right: 1.8rem;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    display: flex;
+}
+
+.navList a:visited {
+    color: black;
+    text-decoration: none;
+  }
+  .navList a:visited {
+    color: black;
+    text-decoration: none;
+  }
+
+.navList a div {
+    text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
 }
 
 #content {

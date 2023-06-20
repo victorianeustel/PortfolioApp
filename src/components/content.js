@@ -8,28 +8,26 @@ function Content() {
     return (
         <div id="content">
             <div id="intro">
-                {/* <div id="text"> */}
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lacinia molestie. Vivamus iaculis, lectus a aliquam ultricies, velit lacus dapibus lectus, eu congue nibh diam quis urna. Suspendisse magna ante, sollicitudin in sapien id, placerat aliquam velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                {/* </div> */}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lacinia molestie. Vivamus iaculis, lectus a aliquam ultricies, velit lacus dapibus lectus, eu congue nibh diam quis urna. Suspendisse magna ante, sollicitudin in sapien id, placerat aliquam velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
                 <div className="navList">
-                    <div>
+                    <a href="url">
                         &rarr;
-                        <a href="url">
+                        <div>
                             About
-                        </a>
-                    </div>
-                    <div>
-                        &rarr;
-                        <a href="url">
+                        </div>
+                    </a>
+                    <a href="url">
+                        &rarr; 
+                        <div>
                             Contact
-                        </a>
-                    </div>
-                    <div>
-                        &rarr;
-                        <a href="url">
+                        </div>
+                    </a>
+                    <a href="url">
+                        &rarr; 
+                        <div>
                             Links
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="picture">

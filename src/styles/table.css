@@ -1,9 +1,8 @@
 table {
     width: 100%;
-    /* align-self: last baseline; */
     height: auto;
     padding: 0.5rem;
-    margin: 10px;
+    margin: 20px;
     border-spacing: 0;
     border-collapse: collapse;
 }
@@ -14,22 +13,30 @@ td {
 }
 
 th {
-    font-size: smaller;
+    font-size: 15px;
     color: #8a8a8a;
     font-weight: 300;
     text-transform: uppercase;
-    padding-bottom: 0.7rem;
+    padding-bottom: 0.5rem;
 }
 
 td {
-    padding: 5px;
+    padding: 7px;
 }
 tr {
-    font-size:larger;
+    font-size:20px;
+    font-weight: 300;
 }
 
 tr:hover td:nth-of-type(1) {
     color: #636363;
+}
+
+tr td:nth-of-type(1){
+    width: 50%;
+}
+tr td:nth-of-type(2),td:nth-of-type(3) {
+    width: 20%;
 }
 
 #date {
