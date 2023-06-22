@@ -1,17 +1,20 @@
 import React from "react";
-import '../styles/global.css'
 import { Link, useLocation, useParams, useNavigate } from "react-router-dom";
 import { data } from "../data/data";
 import NotFound from "./notfound";
-import '../styles/projectdetail.css';
+import '../styles/global.css'
+import style from '../styles/detail.css';
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
+import logo from '../data/VLN_Germany_053.jpg';
+
 
 function ProjectDetail() {
     const { id } = useParams();
 
-    let navigate = useNavigate(); 
-    const routeChange = () =>{ 
-      let path = '/'; 
-      navigate(path);
+    let navigate = useNavigate();
+    const routeChange = () => {
+        let path = '/';
+        navigate(path);
     }
 
     if (data[id] == null) {
@@ -20,16 +23,15 @@ function ProjectDetail() {
     const project = data[id];
 
     return (
-        <div className="container">
-
+        <div className="detailscontainer" style={style}>
             <div id="details">
                 <div onClick={routeChange} id="indexButton">
-                    &larr;index
+                    <ArrowLeftIcon id="larrow" /> index
                 </div>
                 <div id="title">
                     {project.name}
                 </div>
-                <table>
+                <table id="infoTable">
                     <tbody>
                         <tr>
                             <td>Type</td>
@@ -45,12 +47,12 @@ function ProjectDetail() {
                         </tr>
                     </tbody>
                 </table>
-                <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta nibh venenatis cras sed felis eget velit aliquet. Lorem mollis aliquam ut porttitor leo a diam. Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Ultricies leo integer malesuada nunc vel risus commodo viverra. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Est velit egestas dui id ornare arcu odio. Facilisis gravida neque convallis a cras semper. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer. Varius morbi enim nunc faucibus a. Massa tincidunt nunc pulvinar sapien. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Velit egestas dui id ornare arcu odio ut sem nulla. Vitae turpis massa sed elementum tempus egestas sed sed risus. Consequat semper viverra nam libero justo laoreet sit.
+                <div id="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta nibh venenatis cras sed felis eget velit aliquet. Lorem mollis aliquam ut porttitor leo a diam. Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Ultricies leo integer malesuada nunc vel risus commodo viverra. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Est velit egestas dui id ornare arcu odio. Facilisis gravida neque convallis a cras semper. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer. Varius morbi enim nunc faucibus a. Massa tincidunt nunc pulvinar sapien. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Velit egestas dui id ornare arcu odio ut sem nulla. Vitae turpis massa sed elementum tempus egestas sed sed risus. Consequat semper viverra nam libero justo laoreet sit.
                 </div>
             </div>
             <div id="images">
-
+                <img src={logo} alt="Logo" />
             </div>
         </div>
     )

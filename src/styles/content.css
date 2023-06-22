@@ -55,3 +55,8 @@
     justify-content: space-between; 
 }
 
+#rarrow {
+    height: 100%;
+    width: 2rem;
+}
+

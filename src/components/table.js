@@ -12,7 +12,7 @@ function ProjectTable() {
     }
 
     return (
-        <table>
+        <table id="dataTable">
             <thead>
                 <tr>
                 <th id="name">Project</th>

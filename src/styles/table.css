@@ -1,4 +1,4 @@
-table {
+#dataTable table {
     width: 100%;
     height: auto;
     padding: 0.5rem;
@@ -7,12 +7,11 @@ table {
     border-collapse: collapse;
 }
 
-th,
-td {
+#dataTable th,td {
     border-bottom: 1px solid #000000;
 }
 
-th {
+#dataTable th {
     font-size: 15px;
     color: #8a8a8a;
     font-weight: 300;
@@ -20,22 +19,22 @@ th {
     padding-bottom: 0.5rem;
 }
 
-td {
+#dataTable td {
     padding: 7px;
 }
-tr {
+#dataTable tr {
     font-size:20px;
     font-weight: 300;
 }
 
-tr:hover td:nth-of-type(1) {
+#dataTable tr:hover td:nth-of-type(1) {
     color: #636363;
 }
 
-tr td:nth-of-type(1){
+#dataTable tr td:nth-of-type(1){
     width: 50%;
 }
-tr td:nth-of-type(2),td:nth-of-type(3) {
+#dataTable tr td:nth-of-type(2),td:nth-of-type(3) {
     width: 20%;
 }
 
@@ -43,8 +42,6 @@ tr td:nth-of-type(2),td:nth-of-type(3) {
     text-align: right;
 }
 
-#name,
-#type,
-#location {
+#name, #type, #location {
     text-align: left;
 }
