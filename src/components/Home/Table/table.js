@@ -1,6 +1,6 @@
 import React from "react";
-import '../styles/table.css';
-import { data } from "../data/data";
+import './table.css';
+import { data } from "../../../data/data";
 import { useNavigate } from "react-router-dom";
 
 function ProjectTable() {

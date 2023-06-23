@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 // import data from '../data/data';
-import { data } from '../data/data';
+import { data } from '../../data/data';
 
 const Carousel = () => {
     const [index, setIndex] = useState(0);

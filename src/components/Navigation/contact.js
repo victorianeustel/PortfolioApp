@@ -1,27 +1,20 @@
 import React from "react";
 import { Link, useLocation, useParams, useNavigate } from "react-router-dom";
-import { data } from "../data/data";
+import { data } from "../../data/data";
 import NotFound from "./notfound";
-import '../styles/global.css'
-import style from '../styles/detail.css';
+import '../../styles/global.css'
+import style from './style.css';
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
-import logo from '../data/VLN_Germany_053.jpg';
-import Carousel from "./carousel";
+import logo from '../../data/VLN_Germany_053.jpg';
 
 
-function ProjectDetail() {
-    const { id } = useParams();
+function Contact() {
 
     let navigate = useNavigate();
     const routeChange = () => {
         let path = '/';
         navigate(path);
     }
-
-    if (data[id] == null) {
-        return <NotFound></NotFound>
-    }
-    const project = data[id];
 
     return (
         <div className="detailscontainer" style={style}>
@@ -30,21 +23,21 @@ function ProjectDetail() {
                     <ArrowLeftIcon id="larrow" /> index
                 </div>
                 <div id="title">
-                    {project.name}
+                    Contact
                 </div>
                 <table id="infoTable">
                     <tbody>
                         <tr>
                             <td>Type</td>
-                            <td>{project.type}</td>
+                            <td>type</td>
                         </tr>
                         <tr>
                             <td>Location</td>
-                            <td>{project.location}</td>
+                            <td>location</td>
                         </tr>
                         <tr>
                             <td>Date</td>
-                            <td>{project.date}</td>
+                            <td>date</td>
                         </tr>
                     </tbody>
                 </table>
@@ -53,11 +46,10 @@ function ProjectDetail() {
                 </div>
             </div>
             <div id="images">
-                {/* <img src={logo} alt="Logo" /> */}
-                <Carousel />
+                <img src={logo} alt="Logo" />
             </div>
         </div>
     )
 }
 
-export default ProjectDetail;
+export default Contact;

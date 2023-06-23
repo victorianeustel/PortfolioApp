@@ -1,7 +1,7 @@
 import React from "react";
-import '../styles/global.css';
-import logo from '../data/Mexico41.jpg';
-import '../styles/content.css';
+import '../../../styles/global.css';
+import logo from '../../../data/Mexico41.jpg';
+import './content.css';
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 function Content() {
 

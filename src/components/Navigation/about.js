@@ -1,14 +1,14 @@
 import React from "react";
 import { Link, useLocation, useParams, useNavigate } from "react-router-dom";
-import { data } from "../data/data";
+import { data } from "../../data/data";
 import NotFound from "./notfound";
-import '../styles/global.css'
-import style from '../styles/detail.css';
+import '../../styles/global.css'
+import style from './style.css';
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
-import logo from '../data/VLN_Germany_053.jpg';
+import logo from '../../data/VLN_Germany_053.jpg';
 
 
-function Links() {
+function About() {
 
     let navigate = useNavigate();
     const routeChange = () => {
@@ -23,7 +23,7 @@ function Links() {
                     <ArrowLeftIcon id="larrow" /> index
                 </div>
                 <div id="title">
-                    Links
+                    About
                 </div>
                 <table id="infoTable">
                     <tbody>
@@ -52,4 +52,4 @@ function Links() {
     )
 }
 
-export default Links;
+export default About;

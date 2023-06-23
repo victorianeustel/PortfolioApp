@@ -1,8 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ProjectTable from "./table";
-import '../styles/global.css'
-import Content from "./content";
+import ProjectTable from "./Table/table";
+import '../../styles/global.css'
+import Content from "./Header/content";
 
 const Home = () => {
     return (
