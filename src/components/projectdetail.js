@@ -6,6 +6,7 @@ import '../styles/global.css'
 import style from '../styles/detail.css';
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import logo from '../data/VLN_Germany_053.jpg';
+import Carousel from "./carousel";
 
 
 function ProjectDetail() {
@@ -52,7 +53,8 @@ function ProjectDetail() {
                 </div>
             </div>
             <div id="images">
-                <img src={logo} alt="Logo" />
+                {/* <img src={logo} alt="Logo" /> */}
+                <Carousel />
             </div>
         </div>
     )

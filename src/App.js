@@ -8,6 +8,7 @@ import Test from './components/test';
 import Contact from './components/contact';
 import About from './components/about';
 import Links from './components/links';
+import Carousel from './components/carousel';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           
           <Route path='/projects/:id' element={<ProjectDetail  />} />
-          <Route path='/test' element={<Test />} />
+          <Route path='/test' element={<Carousel />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/links' element={<Links />} />
