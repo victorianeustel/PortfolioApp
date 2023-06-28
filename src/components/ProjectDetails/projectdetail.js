@@ -6,7 +6,7 @@ import '../../styles/global.css'
 import style from './detail.css';
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import logo from '../../data/VLN_Germany_053.jpg';
-import Carousel from "./carousel";
+import Carousel from "./Carousel/carousel";
 
 
 function ProjectDetail() {

@@ -1,0 +1,30 @@
+.carousel{
+    display: flex;
+    /* /* flex-wrap: nowrap; */
+    justify-content: space-evenly;
+    /* position: relative;  */
+    /* justify-content: space-around; */
+    align-items: center;
+    /* height: 100%; */
+    /* width: 100%; */
+    /* padding: 20px; */
+    /* border: 3px solid green; */ 
+}
+
+.carousel #images {
+width: 20rem;
+/* height: auto;
+flex: 50%; */
+/* align-self: center; */
+}
+
+.carousel .button{
+    /* margin: 0;
+    /* position: absolute; */
+    /* top: 50%;  */ 
+    /* flex: 100%; */
+    margin: rem;
+      /* padding: 5px; */
+
+
+}

@@ -8,7 +8,9 @@ import Test from './components/test';
 import Contact from './components/Navigation/contact';
 import About from './components/Navigation/about';
 import Links from './components/Navigation/links';
-import Carousel from './components/ProjectDetails/carousel';
+import Carousel from './components/ProjectDetails/Carousel/carousel';
+import TabTest from './components/Tabs/tabs';
+import Page from './components/InfoPage/InfoPage';
 
 function App() {
   return (
@@ -21,7 +23,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/links' element={<Links />} />
-
+          <Route path='/tabtest' element={<Page />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
