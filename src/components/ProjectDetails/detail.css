@@ -6,11 +6,9 @@
 }
 
 #details,
-#images {
+#image-sidebar {
     width: 50%;
 }
-
-
 
 #details div {
     margin: 20px;
@@ -71,19 +69,12 @@ td {
     font-size: large;
 }
 
-#images {
-    background-color: pink;
+/* #images {
+    background-color: purple;
     position: fixed;
     height: 100%;
     left: 50%;
     display: flex;
     justify-content: space-around;
 
-}
-
-#images img {
-    object-fit: fit;
-    /* width: 100%; */
-    height: auto;
-    padding: 6rem;
-}
+} */

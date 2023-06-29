@@ -2,13 +2,24 @@ import React, { useEffect, useState } from 'react';
 import { data } from '../../../data/data';
 import './carousel.css';
 import { ChevronRightIcon, ChevronLeftIcon } from '@radix-ui/react-icons';
+import { motion } from 'framer-motion';
 
-const Carousel = () => {
+function Carousel({dataID}) {
     const [index, setIndex] = useState(0);
-    const length = data[1].images.length;
+    const length = data[dataID].images.length;
+    
+    //rerendering for change of dataID detail page
+    // useEffect(() => {
+    // }, [dataID]);
 
-    useEffect(() => {
-    }, [index]);
+    //preloading images
+    // useEffect(( ) => {
+    //     data[dataID].images.forEach((picture) => {
+    //         new Image().src = picture.fileName;
+    //     })
+    // })
+
+    // console.log("ID: " + dataID)
 
     const handlePrevious = () => {
         const newIndex = index - 1;
@@ -22,14 +33,14 @@ const Carousel = () => {
 
     return (
         <div className="carousel">
-            {/* <button onClick={handlePrevious}> */}
-                <ChevronLeftIcon onClick={handlePrevious} className="button" />
-            {/* </button> */}
-            <img src={data[1].images[index]} id="images" />
-            {/* <div id='images'>hi</div> */}
-            {/* <button onClick={handleNext}> */}
-                <ChevronRightIcon onClick={handleNext} className='button'/>
-            {/* </button> */}
+            <ChevronLeftIcon onClick={handlePrevious} className="carousel-buttons" />
+            <div className='carousel-images'>
+                <div>{index + 1} / {data[dataID].images.length}</div>
+
+                <img src={data[dataID].images[index].link} alt={data[dataID].images[index].description}  />
+                <div>{data[dataID].images[index].description}</div>
+            </div>
+            <ChevronRightIcon onClick={handleNext} className='carousel-buttons' />
         </div>
     );
 };

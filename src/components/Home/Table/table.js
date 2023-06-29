@@ -17,7 +17,7 @@ function ProjectTable() {
                 <tr>
                 <th id="name">Project</th>
                 <th id="type">Type</th>
-                <th id="location">Location</th>
+                <th id="location">Client</th>
                 <th id="date">Date</th>
                 </tr>
             </thead>
@@ -27,8 +27,8 @@ function ProjectTable() {
                         <tr key={key} onClick={() => routeChange(key)}>
                             <td id="name">{event.name}</td>
                             <td id="type">{event.type}</td>
-                            <td id="location">{event.location}</td>
-                            <td id="date">{event.date}</td>
+                            <td id="location">{event.client}</td>
+                            <td id="date">{event.year}</td>
                         </tr>
                     )
                 })}

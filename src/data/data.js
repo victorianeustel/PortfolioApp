@@ -1,166 +1,116 @@
-export const data = 
-[
+export const data =
+  [
     {
-      "location" : "Miami",
-      "date" : "2022",
-      "type" : "Event",
-      "name" : "Formula 1 Grand Prix",
-      "headerPath" : "",
-      "imagePaths" : [
-        "Miami/000037630031.jpg",
-        "Miami/000037630032.jpg",
-        "Miami/000037640003.jpg",
-        "Miami/000037640010.jpg",
-        "Miami/000037640013.jpg",
-        "Miami/000037640018.jpg",
-        "Miami/000037640020.jpg",
-        "Miami/000037640028.jpg"
-      ]
-    },
-    {
-      "location" : "Germany",
-      "date" : "2022",
-      "type" : "Event",
-      "name" : "Study Abroad",
-      "imagePaths" : [
-        "Miami/000037630031.jpg",
-        "Miami/000037630032.jpg",
-        "Miami/000037640003.jpg",
-        "Miami/000037640010.jpg",
-        "Miami/000037640013.jpg",
-        "Miami/000037640018.jpg",
-        "Miami/000037640020.jpg",
-        "Miami/000037640028.jpg"
-      ],
+      "id": "capstone",
+      "client": "Microsoft / NDSU Agriculture",
+      "year": "2023",
+      "date": "01/2023 - 05/2023",
+      "type": "Senior Capstone Project",
+      "name": "General Data Ingestion Tool for Crop Variety Trials",
       "images": [
-        "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Miami%2F000037640018.jpg?alt=media&token=44b9d9af-c884-438e-a7f7-59a6e026c830",
-        "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Miami%2F000037630032.jpg?alt=media&token=70c2b04a-df25-45e1-95db-485c7b451739",
-        "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Miami%2F000037640010.jpg?alt=media&token=91a15e21-460c-4e7e-ae7e-0c13a07ba5eb",
-        "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Miami%2F000037640013.jpg?alt=media&token=e5d5068f-9a1f-4399-847d-ea7966b846ba",
-        "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Miami%2F000037640020.jpg?alt=media&token=0e9abe64-c580-4c53-8387-8ef99614343c",
-        "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Miami%2F000037640028.jpg?alt=media&token=f8c3dd50-0abd-4924-a524-f857310bbf24",
-        "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Miami%2F000037630031.jpg?alt=media&token=adde8c68-a870-44ea-a533-716291735a7b"
-      ]
-    },
-      {
-      "location" : "Fargo",
-      "date" : "2023",
-      "type" : "Personal",
-      "name" : "Last Semester of College",
-      "imagePaths" : [
-        "Miami/000037630031.jpg",
-        "Miami/000037630032.jpg",
-        "Miami/000037640003.jpg",
-        "Miami/000037640010.jpg",
-        "Miami/000037640013.jpg",
-        "Miami/000037640018.jpg",
-        "Miami/000037640020.jpg",
-        "Miami/000037640028.jpg"
-      ]
-    },   
-    {
-      "location" : "Miami",
-      "date" : "2022",
-      "type" : "Event",
-      "name" : "Formula 1 Grand Prix",
-      "imagePaths" : [
-        "Miami/000037630031.jpg",
-        "Miami/000037630032.jpg",
-        "Miami/000037640003.jpg",
-        "Miami/000037640010.jpg",
-        "Miami/000037640013.jpg",
-        "Miami/000037640018.jpg",
-        "Miami/000037640020.jpg",
-        "Miami/000037640028.jpg"
-      ]
-    },
-     {
-      "location" : "Germany",
-      "date" : "2022",
-      "type" : "Event",
-      "name" : "Study Abroad",
-      "imagePaths" : [
-        "Miami/000037630031.jpg",
-        "Miami/000037630032.jpg",
-        "Miami/000037640003.jpg",
-        "Miami/000037640010.jpg",
-        "Miami/000037640013.jpg",
-        "Miami/000037640018.jpg",
-        "Miami/000037640020.jpg",
-        "Miami/000037640028.jpg"
-      ]
-    },
-      {
-      "location" : "Fargo",
-      "date" : "2023",
-      "type" : "Personal",
-      "name" : "Last Semester of College",
-      "imagePaths" : [
-        "Miami/000037630031.jpg",
-        "Miami/000037630032.jpg",
-        "Miami/000037640003.jpg",
-        "Miami/000037640010.jpg",
-        "Miami/000037640013.jpg",
-        "Miami/000037640018.jpg",
-        "Miami/000037640020.jpg",
-        "Miami/000037640028.jpg"
-      ]
-    },   
-    {
-      "location" : "Miami",
-      "date" : "2022",
-      "type" : "Event",
-      "name" : "Formula 1 Grand Prix",
-      "imagePaths" : [
-        "Miami/000037630031.jpg",
-        "Miami/000037630032.jpg",
-        "Miami/000037640003.jpg",
-        "Miami/000037640010.jpg",
-        "Miami/000037640013.jpg",
-        "Miami/000037640018.jpg",
-        "Miami/000037640020.jpg",
-        "Miami/000037640028.jpg"
-      ]
-    },
-     {
-      "location" : "Germany",
-      "date" : "2022",
-      "type" : "Event",
-      "name" : "Study Abroad",
-      "imagePaths" : [
-        "Miami/000037630031.jpg",
-        "Miami/000037630032.jpg",
-        "Miami/000037640003.jpg",
-        "Miami/000037640010.jpg",
-        "Miami/000037640013.jpg",
-        "Miami/000037640018.jpg",
-        "Miami/000037640020.jpg",
-        "Miami/000037640028.jpg"
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Fposter.jpg?alt=media&token=04dd21b2-9c55-4b01-b88a-bfa7a668e488",
+          "description": "Poster for NDSU Engineering Senior Expo",
+        },
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Fdiagram.jpg?alt=media&token=71fa1ae4-128b-4bd2-ac6a-565c180dd176",
+          "description": "Application technology diagram",
+        },
+
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Freport.png?alt=media&token=edefe712-332f-4337-9a8f-6137bebcd84e",
+          "description": "Application generated speadsheet report from user selected traits and source files.",
+        },
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2FIMG_1440.JPG?alt=media&token=3f80ddb2-e286-4f18-99d1-2a3d2b6affed",
+          "description": "Team members with Microsoft mentor, Matt Schumacher.",
+        },
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2FScreenshot%202023-04-25%20at%207.25.45%20PM.png?alt=media&token=a73366f7-93bb-426f-99ad-5c0ce2fbd166",
+          "description": "File management page.",
+        },
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2FScreenshot%202023-04-25%20at%207.26.08%20PM.png?alt=media&token=faf738b4-d12a-4974-9a52-f145b893ec5f",
+          "description": "Upload file form.",
+        },
+
       ],
-      "images": [
-        "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Miami%2F000037640018.jpg?alt=media&token=44b9d9af-c884-438e-a7f7-59a6e026c830",
-        "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Miami%2F000037630032.jpg?alt=media&token=70c2b04a-df25-45e1-95db-485c7b451739",
-        "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Miami%2F000037640010.jpg?alt=media&token=91a15e21-460c-4e7e-ae7e-0c13a07ba5eb",
-        "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Miami%2F000037640013.jpg?alt=media&token=e5d5068f-9a1f-4399-847d-ea7966b846ba",
-        "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Miami%2F000037640020.jpg?alt=media&token=0e9abe64-c580-4c53-8387-8ef99614343c",
-        "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Miami%2F000037640028.jpg?alt=media&token=f8c3dd50-0abd-4924-a524-f857310bbf24",
-        "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Miami%2F000037630031.jpg?alt=media&token=adde8c68-a870-44ea-a533-716291735a7b"
-      ]
+      "technology": [
+        "React",
+        "ASP.NET",
+        "Azure Data Lake",
+        "Azure DevOps"
+      ],
+      "description": "This year's Microsoft and NDSU Agriculture capstone project objective is to develop a web application that can store, catalog, and report data from crop variety trials. The project aims to simplify the current challenge faced by NDSU Agriculture Plant Breeders and Researchers in effectively managing and analyzing the vast amount of complex crop variety trial data collected from Research Extension Centers across North Dakota, which will eliminate the months of manual work that is currently required to complete these tasks."
     },
-      {
-      "location" : "Fargo",
-      "date" : "2023",
-      "type" : "Personal",
-      "name" : "Last Semester of College",
-      "imagePaths" : [
-        "Miami/000037630031.jpg",
-        "Miami/000037630032.jpg",
-        "Miami/000037640003.jpg",
-        "Miami/000037640010.jpg",
-        "Miami/000037640013.jpg",
-        "Miami/000037640018.jpg",
-        "Miami/000037640020.jpg",
-        "Miami/000037640028.jpg"
-      ]
-    },   
-]
+    {
+      "client": "Personal Project",
+      "year": "2023",
+      "date": "01/2023 - 05/2023",
+      "type": "Web Application",
+      "name": "Job Application Tool",
+      "images": [
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Fdiagram.jpg?alt=media&token=71fa1ae4-128b-4bd2-ac6a-565c180dd176",
+          "description": "hi",
+        },
+
+
+      ],
+      "technology": [
+        "React.js",
+        "OpenAI", 
+        "Firebase Realtime"
+      ],
+      "repo" : "",
+      "description": "This year's Microsoft and NDSU Agriculture capstone project objective is to develop a web application that can store, catalog, and report data from crop variety trials. The project aims to simplify the current challenge faced by NDSU Agriculture Plant Breeders and Researchers in effectively managing and analyzing the vast amount of complex crop variety trial data collected from Research Extension Centers across North Dakota, which will eliminate the months of manual work that is currently required to complete these tasks."
+    },
+    {
+      "client": "Personal Project",
+      "year": "2022",
+      "date": "08/2022 - 12/2022",
+      "type": "Web Application",
+      "name": "Game Score Tracker",
+      "images": [
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Fposter.jpg?alt=media&token=04dd21b2-9c55-4b01-b88a-bfa7a668e488",
+          "description": "Poster for NDSU Engineering Senior Expo",
+        },
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Fdiagram.jpg?alt=media&token=71fa1ae4-128b-4bd2-ac6a-565c180dd176",
+          "description": "hi",
+        },
+
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Freport.png?alt=media&token=edefe712-332f-4337-9a8f-6137bebcd84e",
+          "description": "",
+        },
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2FIMG_1440.JPG?alt=media&token=3f80ddb2-e286-4f18-99d1-2a3d2b6affed",
+          "description": "",
+        },
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2FScreenshot%202023-04-25%20at%207.25.45%20PM.png?alt=media&token=a73366f7-93bb-426f-99ad-5c0ce2fbd166",
+          "description": "",
+        },
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2FScreenshot%202023-04-25%20at%207.26.08%20PM.png?alt=media&token=faf738b4-d12a-4974-9a52-f145b893ec5f",
+          "description": "",
+        },
+
+      ],
+      "technology": [
+        "Angular",
+        "Node.JS / Express",
+        "Firebase Realtime",
+      ],
+      "description": "",
+    },
+  ]
+
+export const about = {
+  "about": {
+    "image": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/About%2F05_2023_VLN_0022.JPG?alt=media&token=faae0e96-dbb5-40c5-9581-e8553812be21",
+    "description": ""
+  }
+}

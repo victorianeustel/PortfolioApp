@@ -1,4 +1,4 @@
-#dataTable table {
+#dataTable {
     width: 100%;
     height: auto;
     padding: 0.5rem;
@@ -27,6 +27,7 @@
     font-weight: 300;
 }
 
+/* only highlight the first column on hover*/
 #dataTable tr:hover td:nth-of-type(1) {
     color: #636363;
 }

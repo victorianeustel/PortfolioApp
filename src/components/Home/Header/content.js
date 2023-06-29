@@ -8,7 +8,10 @@ function Content() {
     return (
         <div id="content">
             <div id="intro">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lacinia molestie. Vivamus iaculis, lectus a aliquam ultricies, velit lacus dapibus lectus, eu congue nibh diam quis urna. Suspendisse magna ante, sollicitudin in sapien id, placerat aliquam velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lacinia molestie. Vivamus iaculis, lectus a aliquam ultricies, velit lacus dapibus lectus, eu congue nibh diam quis urna. Suspendisse magna ante, sollicitudin in sapien id, placerat aliquam velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. */}
+                <b>Victoria Neustel</b> is a talented and enthusiastic individual who recently graduated from North Dakota State University with a Bachelor of Science degree in Computer Science.
+                With a passion for both technology and creativity, they have developed a diverse range of interests and hobbies.
+                With their diverse range of interests and their dedication to computer science, Victoria is excited to join a team to make a significant impact in the world of technology and beyond.
                 <div className="navList">
                     <a href="about">
                         {/* &rarr; */}
@@ -18,15 +21,21 @@ function Content() {
                         </div>
                     </a>
                     <a href="contact">
-                    <ArrowRightIcon id="rarrow" />
+                        <ArrowRightIcon id="rarrow" />
                         <div>
                             Contact
                         </div>
                     </a>
-                    <a href="links">
-                    <ArrowRightIcon id="rarrow" />
+                    {/* <a href="links">
+                        <ArrowRightIcon id="rarrow" />
                         <div>
                             Links
+                        </div>
+                    </a> */}
+                    <a href="links">
+                        <ArrowRightIcon id="rarrow" />
+                        <div>
+                            Reviews
                         </div>
                     </a>
                 </div>
