@@ -4,7 +4,10 @@ import logo from '../../../data/Mexico41.jpg';
 import './content.css';
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 function Content() {
-
+    const handleContactClick = () => {
+        const mailLink = 'mailto:victoria.neustel@outlook.com';
+        window.location.replace(mailLink);
+    };
     return (
         <div id="content">
             <div id="intro">
@@ -20,22 +23,23 @@ function Content() {
                             About
                         </div>
                     </a>
-                    <a href="contact">
-                        <ArrowRightIcon id="rarrow" />
-                        <div>
-                            Contact
-                        </div>
-                    </a>
+
                     {/* <a href="links">
                         <ArrowRightIcon id="rarrow" />
                         <div>
                             Links
                         </div>
                     </a> */}
-                    <a href="links">
+                    {/* <a href="links">
                         <ArrowRightIcon id="rarrow" />
                         <div>
                             Reviews
+                        </div>
+                    </a> */}
+                    <a onClick={handleContactClick}>
+                        <ArrowRightIcon id="rarrow" />
+                        <div>
+                            Contact
                         </div>
                     </a>
                 </div>

@@ -108,7 +108,11 @@ td {
 }
 
 .wordle #image-sidebar {
-    background-color: #b5c7c2;
+    background-color: #99aa9a;
+}
+
+.idlegame #image-sidebar {
+    background-color: #8cb2b5;
 }
 
 #image-sidebar {

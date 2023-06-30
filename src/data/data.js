@@ -74,7 +74,7 @@ export const data =
         "OpenAI",
         "Firebase Realtime"
       ],
-      "description": ""
+      "description": "This application is designed to address the challenges of managing job applications and offering valuable resources for the interview process. By leveraging the capabilities of ChatGPT's API, OpenAI, the application communicates the job description and receives AI-generated responses in a JSON format, organized as an array of objects. Its current Artifical Intelligence functionalities include analyzing the job description to generate five possible interview questions and identifying the top 10 keywords within the description. This tool enables users to efficiently track and update the status of their job applications while also providing valuable preparation materials for a successful interview."
     },
     {
       "id": "wordle",
@@ -92,10 +92,10 @@ export const data =
       ],
       "technology": [
         "Angular",
-        "Google SQL",
-        "Node.JS / Express",
+        "Google Cloud SQL",
+        "Node.JS - Express",
       ],
-      "description": "",
+      "description": "Designed to address a common challenge faced by Wordle players, this application offers a solution for tracking both personal and friends' daily scores. Developed using Angular, it leverages the power of Google Cloud SQL database to store and manage daily scores for each participant. The application calculates the average score for each user on a daily basis and provides a ranking that reflects their performance. By infusing the competitive and playful spirit of Wordle, this application motivates users to play daily, improve their scores, and strive for victory.",
     },
     {
       "id": "idlegame",
@@ -107,15 +107,16 @@ export const data =
       "name": "Web Based Idle Game",
       "images": [
         {
-          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Fposter.jpg?alt=media&token=04dd21b2-9c55-4b01-b88a-bfa7a668e488",
-          "description": "Poster for NDSU Engineering Senior Expo",
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/IdleApp%2Fidlecoder.PNG?alt=media&token=e1bc1c76-c341-4c59-9f9d-a12ff6204d31",
+          "description": "Single page idle game application.",
         },
       ],
       "technology": [
         "Angular",
         "Firebase Realtime",
       ],
-      "description": "",
+      "description": "Idle Coder was based off existing idle games like Cookie Clicker by Julien Thiennot. In general, idle games revolve around user input adding to the score. We chose this idea based on each of our interests in video games and decided to make our final project based around the topic instead of choosing a topic we weren't as interested in.",
+      "link": "http://students.cs.ndsu.nodak.edu/~victoria.neustel/angular/project/"
     },
   ]
 
