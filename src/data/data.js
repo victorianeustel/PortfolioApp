@@ -18,6 +18,10 @@ export const data =
         },
 
         {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Fdashboard.jpg?alt=media&token=ff5368f1-6fc5-41ae-97d7-17ddc50d070b",
+          "description": "User dashboard page after successful authentication log in."
+        },
+        {
           "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Freport.png?alt=media&token=edefe712-332f-4337-9a8f-6137bebcd84e",
           "description": "Application generated speadsheet report from user selected traits and source files.",
         },
@@ -44,6 +48,8 @@ export const data =
       "description": "This year's Microsoft and NDSU Agriculture capstone project objective is to develop a web application that can store, catalog, and report data from crop variety trials. The project aims to simplify the current challenge faced by NDSU Agriculture Plant Breeders and Researchers in effectively managing and analyzing the vast amount of complex crop variety trial data collected from Research Extension Centers across North Dakota, which will eliminate the months of manual work that is currently required to complete these tasks."
     },
     {
+      "id": "jobapp",
+      "repo": "https://github.com/victorianeustel/job-management-tool",
       "client": "Personal Project",
       "year": "2023",
       "date": "01/2023 - 05/2023",
@@ -51,21 +57,28 @@ export const data =
       "name": "Job Application Tool",
       "images": [
         {
-          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Fdiagram.jpg?alt=media&token=71fa1ae4-128b-4bd2-ac6a-565c180dd176",
-          "description": "hi",
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/JobTool%2FScreenshot%202023-06-29%20at%2012.44.13%20PM.png?alt=media&token=d2b3145e-870d-45f5-a4db-9fbc1270fed7",
+          "description": "Job Application entry detailed page with OpenAi generated interview questions and keywords.",
         },
-
-
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/JobTool%2FScreenshot%202023-06-29%20at%2012.44.05%20PM.png?alt=media&token=abaef599-2284-48f3-829f-09b1d7750794",
+          "description": "List of job applications entered into the application."
+        },
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/JobTool%2FScreenshot%202023-06-29%20at%2012.44.26%20PM.png?alt=media&token=54bdd058-3cec-4bbd-822b-a0d521cbb7ee",
+          "description": "New job application entry form to start tracking data."
+        },
       ],
       "technology": [
         "React.js",
-        "OpenAI", 
+        "OpenAI",
         "Firebase Realtime"
       ],
-      "repo" : "",
-      "description": "This year's Microsoft and NDSU Agriculture capstone project objective is to develop a web application that can store, catalog, and report data from crop variety trials. The project aims to simplify the current challenge faced by NDSU Agriculture Plant Breeders and Researchers in effectively managing and analyzing the vast amount of complex crop variety trial data collected from Research Extension Centers across North Dakota, which will eliminate the months of manual work that is currently required to complete these tasks."
+      "description": ""
     },
     {
+      "id": "wordle",
+      "repo": "https://github.com/victorianeustel/wordleContest",
       "client": "Personal Project",
       "year": "2022",
       "date": "08/2022 - 12/2022",
@@ -73,35 +86,33 @@ export const data =
       "name": "Game Score Tracker",
       "images": [
         {
-          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Fposter.jpg?alt=media&token=04dd21b2-9c55-4b01-b88a-bfa7a668e488",
-          "description": "Poster for NDSU Engineering Senior Expo",
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Wordle%2FIMG_8181.JPEG?alt=media&token=e4d78962-c143-4883-a5bc-58356ae71831",
+          "description": "Score page with daily user scores and cumulative scoring placement.",
         },
-        {
-          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Fdiagram.jpg?alt=media&token=71fa1ae4-128b-4bd2-ac6a-565c180dd176",
-          "description": "hi",
-        },
-
-        {
-          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Freport.png?alt=media&token=edefe712-332f-4337-9a8f-6137bebcd84e",
-          "description": "",
-        },
-        {
-          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2FIMG_1440.JPG?alt=media&token=3f80ddb2-e286-4f18-99d1-2a3d2b6affed",
-          "description": "",
-        },
-        {
-          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2FScreenshot%202023-04-25%20at%207.25.45%20PM.png?alt=media&token=a73366f7-93bb-426f-99ad-5c0ce2fbd166",
-          "description": "",
-        },
-        {
-          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2FScreenshot%202023-04-25%20at%207.26.08%20PM.png?alt=media&token=faf738b4-d12a-4974-9a52-f145b893ec5f",
-          "description": "",
-        },
-
       ],
       "technology": [
         "Angular",
+        "Google SQL",
         "Node.JS / Express",
+      ],
+      "description": "",
+    },
+    {
+      "id": "idlegame",
+      "repo": "https://github.com/victorianeustel/WebBasedIdleGame",
+      "client": "Software Development Project",
+      "year": "2022",
+      "date": "02/2022 - 05/2022",
+      "type": "Web Application",
+      "name": "Web Based Idle Game",
+      "images": [
+        {
+          "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2Fposter.jpg?alt=media&token=04dd21b2-9c55-4b01-b88a-bfa7a668e488",
+          "description": "Poster for NDSU Engineering Senior Expo",
+        },
+      ],
+      "technology": [
+        "Angular",
         "Firebase Realtime",
       ],
       "description": "",

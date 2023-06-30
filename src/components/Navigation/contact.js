@@ -5,9 +5,11 @@ import '../../styles/global.css'
 import style from '../../styles/childPage.css';
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import logo from '../../data/VLN_Germany_053.jpg';
+import useDocumentTitle from "../../actions/useDocumentTitle";
 
 
 function Contact() {
+    useDocumentTitle('Contact - Victoria Neustel')
 
     let navigate = useNavigate();
     const routeChange = () => {
@@ -46,7 +48,7 @@ function Contact() {
             </div>
             <div id="image-sidebar">
                 <div className="carousel">
-                    <img src={logo} alt="Logo" id="page-image" />
+                    <img src={logo} alt="Logo" id="single-image" />
                 </div>
             </div>
         </div>

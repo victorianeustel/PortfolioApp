@@ -1,16 +1,20 @@
 import React from "react";
 import { Link, useLocation, useParams, useNavigate } from "react-router-dom";
 import { data } from "../../data/data";
+
 import NotFound from "../Navigation/notfound";
 import '../../styles/global.css'
-import '../../styles/childPage.css'
-import style from './detail.css';
+import style from '../../styles/childPage.css'
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import Carousel from "./Carousel/carousel";
+import useDocumentTitle from "../../actions/useDocumentTitle";
 
 
 function ProjectDetail() {
     const { id } = useParams();
+
+    useDocumentTitle( data[id].name + ' - Victoria Neustel')
+
 
     let navigate = useNavigate();
     const routeChange = () => {
@@ -21,39 +25,42 @@ function ProjectDetail() {
     if (data[id] == null) {
         return <NotFound></NotFound>
     }
-    const project = data[id];
+    const handleClick = () => {
+        window.location.replace(data[id].repo);
+    };
+
 
     return (
-        <div className={`detailscontainer ${project.id}`} style={style}>
+        <div className={`detailscontainer ${data[id].id}`} style={style}>
             <div id="details">
                 <div onClick={routeChange} id="indexButton">
                     <ArrowLeftIcon id="larrow" /> index
                 </div>
                 <div id="title">
-                    {project.name}
+                    {data[id].name}
                 </div>
                 <table id="infoTable">
                     <tbody>
                         <tr>
                             <td>Type</td>
-                            <td>{project.type}</td>
+                            <td>{data[id].type}</td>
                         </tr>
                         <tr>
                             <td>Client</td>
-                            <td>{project.client}</td>
+                            <td>{data[id].client}</td>
                         </tr>
                         <tr>
                             <td>Date</td>
-                            <td>{project.date}</td>
+                            <td>{data[id].date}</td>
                         </tr>
                         <tr>
                             <td>Technology</td>
-                            <td>{project.technology.join(", ")}</td>
+                            <td>{data[id].technology.join(", ")}</td>
                         </tr>
-                        {project.repo === null ?
+                        {data[id].repo != null ?
                             <tr>
                                 <td>Repo</td>
-                                <td>{project.repo}</td>
+                                <td id="repo-link" onClick={handleClick}>{data[id].repo.substring(0, 30) + "..."}</td>
                             </tr>
                             :
                             <></>}
@@ -66,7 +73,14 @@ function ProjectDetail() {
                 </div>
             </div>
             <div id="image-sidebar">
-                <Carousel className="image-carousel" dataID={id} />
+                {/* {data[id].images.length === 1 ?
+                    <div id="single-image">
+                        <img src={data[id].images[0].link} alt={data[id].images[0].description} />
+                        <div id="description"> {data[id].images[0].description}</div>
+                    </div>
+                    : */}
+                    <Carousel className="image-carousel" dataID={id} />
+                {/* } */}
             </div>
         </div>
     )

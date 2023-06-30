@@ -4,20 +4,20 @@ import './carousel.css';
 import { ChevronRightIcon, ChevronLeftIcon } from '@radix-ui/react-icons';
 import { motion } from 'framer-motion';
 
-function Carousel({dataID}) {
+function Carousel({ dataID }) {
     const [index, setIndex] = useState(0);
     const length = data[dataID].images.length;
-    
+
     //rerendering for change of dataID detail page
     // useEffect(() => {
     // }, [dataID]);
 
     //preloading images
-    // useEffect(( ) => {
-    //     data[dataID].images.forEach((picture) => {
-    //         new Image().src = picture.fileName;
-    //     })
-    // })
+    useEffect(() => {
+        data[dataID].images.forEach((picture) => {
+            new Image().src = picture.fileName;
+        })
+    })
 
     // console.log("ID: " + dataID)
 
@@ -32,15 +32,29 @@ function Carousel({dataID}) {
     };
 
     return (
-        <div className="carousel">
-            <ChevronLeftIcon onClick={handlePrevious} className="carousel-buttons" />
-            <div className='carousel-images'>
-                <div>{index + 1} / {data[dataID].images.length}</div>
 
-                <img src={data[dataID].images[index].link} alt={data[dataID].images[index].description}  />
-                <div>{data[dataID].images[index].description}</div>
-            </div>
-            <ChevronRightIcon onClick={handleNext} className='carousel-buttons' />
+        <div className="carousel">
+            {data[dataID].images.length === 1 ?
+                <div className="carousel">
+                    <div className='carousel-images'>
+                        <img src={data[dataID].images[0].link} alt={data[dataID].images[0].description} />
+                        <div>{data[dataID].images[index].description}</div>
+                    </div>
+                </div>
+                :
+                <div className="carousel">
+
+                    <ChevronLeftIcon onClick={handlePrevious} className="carousel-buttons" />
+                    <div className='carousel-images'>
+                        <div>{index + 1} / {data[dataID].images.length}</div>
+
+                        <img src={data[dataID].images[index].link} alt={data[dataID].images[index].description} />
+                        <div>{data[dataID].images[index].description}</div>
+                    </div>
+                    <ChevronRightIcon onClick={handleNext} className='carousel-buttons' />
+                </div>
+
+            }
         </div>
     );
 };
