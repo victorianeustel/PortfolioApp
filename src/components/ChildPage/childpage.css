@@ -1,0 +1,27 @@
+.grid-container {
+    display: grid;  
+    grid-template-columns: auto ;
+}
+
+.leftside, .rightside {
+    height: 50vh;
+    width: 100%;
+}
+
+@media screen and (min-width:1000px){
+    .leftside, .rightside {
+        height: 100vh;
+    }
+    .grid-container {
+        grid-template-columns: auto auto ;
+
+    }
+}
+
+.leftside {
+    background-color: red;
+}
+
+.rightside {
+    background-color: blue;
+}
