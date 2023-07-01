@@ -15,7 +15,6 @@ function ProjectDetail() {
 
     useDocumentTitle( data[id].name + ' - Victoria Neustel')
 
-
     let navigate = useNavigate();
     const routeChange = () => {
         let path = '/';

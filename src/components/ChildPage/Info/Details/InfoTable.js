@@ -1,21 +1,19 @@
 import React from "react";
+import { data } from "../../../../data/data";
 
-function InfoTable() {
+function InfoTable(props) {
+    const { item } = props;
 
     return (
         <table className="info-table">
-                        <tr>
-                            <td>Location</td>
-                            <td>Fargo, ND</td>
-                        </tr>
-                        <tr>
-                            <td>Education</td>
-                            <td>B.S. in Computer Science<br /> North Dakota State University</td>
-                        </tr>
-                        <tr>
-                            <td>Achievements</td>
-                            <td>Magna Cum Laude (3.73 / 4.00 GPA)</td>
-                        </tr>
+            <tbody>
+                {Object.keys(item).map((key, i) => (
+                    <tr key={i}>
+                        <td>{key}</td>
+                        <td>{item[key]}</td>
+                    </tr>
+                ))}
+            </tbody>
         </table>
     )
 }

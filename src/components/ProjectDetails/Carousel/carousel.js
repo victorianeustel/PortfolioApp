@@ -12,11 +12,11 @@ function Carousel({ dataID }) {
     // }, [dataID]);
 
     //preloading images
-    useEffect(() => {
-        data[dataID].images.forEach((picture) => {
-            new Image().src = picture.fileName;
-        })
-    })
+    // useEffect(() => {
+    //     data[dataID].images.forEach((picture) => {
+    //         new Image().src = picture.fileName;
+    //     })
+    // })
 
     // console.log("ID: " + dataID)
 

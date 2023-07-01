@@ -3,12 +3,13 @@ import '../childpage.css';
 import Details from "./Details/details";
 import DetailHeader from "./Header/Header";
 
-function InfoPage() {
+function InfoPage(props) {
+    const {item} = props;
 
     return (
         <div className="details-container">
-            <DetailHeader />
-            <Details />
+            <DetailHeader item={item}/>
+            <Details item={item}/>
         </div>
     )
 }

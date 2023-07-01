@@ -146,11 +146,8 @@ td {
     width: 80%;
 }
 
-.image-container {
-    background-color: gray;
-    display: flex;
-    justify-content: center;
-    margin: 2vh;
+.image-list{
+    display: none;
 }
 
 
@@ -185,7 +182,7 @@ td {
         margin-bottom: 10px;
     }
 
-    .header-image {
+    .about .header-image {
         display: flex;
         justify-self: center;
         width: 100%;
@@ -193,4 +190,28 @@ td {
         left: auto;
         right: auto;
     }
+
+    .about .image-list {
+        display: none;
+    }
+
+    .image-list img {
+        width: 80%;
+    }
+
+    .image-list-item {
+        margin-top: 1rem;
+        text-align: center;
+    }
+    
+    .image-list {
+        list-style-position: inside;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
 }

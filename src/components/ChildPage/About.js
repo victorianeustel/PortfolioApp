@@ -11,36 +11,20 @@ import Carousel from "./Media/Carousel/carousel";
 
 import useDocumentTitle from "../../actions/useDocumentTitle";
 
-function handleClick() {
-    const gitLink = 'https://github.com/victorianeustel';
-    window.location.replace(gitLink);
-}
+function About() {
 
-function ChildPage() {
-    const { id } = useParams();
-
-    if (data[id] == null) {
-        return <NotFound></NotFound>
-    }
+    console.log(about.images);
     return (
-        <div className={`flex-container ${data[id].id}`}>
+        <div className={`flex-container ${about.id}`}>
             <div class="leftside">
-                <InfoPage item={data[id]} />
+                <InfoPage item={about} />
 
             </div>
             <div className="rightside">
-                {data[id].id == "about" ? 
-                
-                <img src={about.images[0]} alt="Logo" />
-
-                : 
-                <Carousel images={data[id].images}></Carousel>
-
-                
-                }
+                <Carousel images={about.images}></Carousel>
             </div>
         </div>
     )
 }
 
-export default ChildPage;
+export default About;
