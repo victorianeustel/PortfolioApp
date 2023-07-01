@@ -1,15 +1,17 @@
 import React from "react";
 import '../../childpage.css';
 import InfoTable from "./InfoTable";
+import SocialBar from "./SocialBar";
+import { about } from "../../../../data/data";
+
 function Details() {
 
     return (
         <div className="child-details">
-
+            <SocialBar />
             <InfoTable />
             <div className="description-box">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. !!
-            </div>
+{about.about.description}            </div>
         </div>
     )
 }

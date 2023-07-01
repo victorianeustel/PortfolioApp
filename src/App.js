@@ -17,10 +17,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/projects/:id'element={<ProjectDetail  />} />
-          <Route path='/about' element={<About />} />
+          <Route path='/about' element={<ChildPage />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/links' element={<Links />} />
-          <Route path='/child' element={<ChildPage />} />
+          {/* <Route path='/child' element={<ChildPage />} /> */}
 
           <Route path='*' element={<NotFound />} />
         </Routes>

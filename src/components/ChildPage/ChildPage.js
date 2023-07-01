@@ -1,15 +1,21 @@
 import React from "react";
+import {useNavigate } from "react-router-dom";
 import './childpage.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import logo from '../../data/Mexico41.jpg';
 import InfoPage from "./Info/Info";
+import { data, about } from "../../data/data";
+
 
 import useDocumentTitle from "../../actions/useDocumentTitle";
 
 function ChildPage() {
-    useDocumentTitle('child page')
+    useDocumentTitle('About - Victoria Neustel')
+
+    let navigate = useNavigate();
+    const routeChange = () => {
+        let path = '/';
+        navigate(path);
+    }
 
     return (
         <div class="flex-container">
@@ -18,7 +24,7 @@ function ChildPage() {
             </div>
             <div class="rightside">
                 {/* <div className="image-container"> */}
-                    <img src={logo}></img>
+                <img src={about.about.image} alt="Logo" />
 
                 {/* </div> */}
             </div>
