@@ -1,0 +1,196 @@
+@keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    /* 90% {
+        opacity: 0.2;
+    } */
+    100% {
+      opacity: 1;
+    }
+  }
+
+/* 
+/////// DESKTOP CSS ///////
+*/
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    font-family: 'Prompt', sans-serif;
+    animation: fadeInAnimation 0.75s linear;
+}
+
+.leftside,
+.rightside {
+    height: 100vh;
+    width: 50vw;
+}
+
+/* 
+    DETAILS SIDE 
+*/
+.leftside {
+    display: flex;
+}
+
+.details-container {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 2vh;
+}
+
+.details-title {
+    height: 45vh;
+}
+
+.child-details {
+    height: fit-content;
+}
+
+.description-box {
+    margin-left: 7px;
+    text-align: left;
+    font-size: large;
+}
+
+.page-title {
+    font-size: 4rem;
+    text-align: left;
+}
+
+/* social links */
+.social-bar img {
+    height: 2rem;
+    padding-right: 0.5rem;
+    opacity: 35%;
+}
+
+.social-bar img:hover {
+
+    opacity: 65%;
+    cursor: pointer;
+}
+
+.social-bar {
+    padding-left: 0.25rem;
+    display: flex;
+    justify-content: left;
+    padding-bottom: 0.5rem;
+}
+
+/* TABLE */
+.info-table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.info-table th,
+td {
+    border-top: 1px solid black;
+    border-bottom: 1px solid #000000;
+}
+
+.info-table td {
+    padding: 7px;
+}
+
+.info-table tr {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.info-table tr td:nth-of-type(1) {
+    width: 50%;
+}
+
+/* top bar*/
+.home-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.home-bar:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+
+
+/* 
+    MEDIA SIDE 
+*/
+
+.rightside {
+    background-color: #b5c7c2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.header-image {
+    display: none;
+}
+
+.rightside img {
+    width: 80%;
+}
+
+.image-container {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    margin: 2vh;
+}
+
+
+
+/* 
+/////// MOBILE CSS ///////
+*/
+
+@media screen and (max-width:800px) {
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .rightside,
+    .leftside,
+    .details-title {
+        height: fit-content;
+    }
+
+    .rightside {
+        display: none;
+    }
+
+    .leftside {
+        width: 100%;
+    }
+
+    .page-title {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .header-image {
+        display: flex;
+        justify-self: center;
+        width: 100%;
+        padding-bottom: 1rem;
+        left: auto;
+        right: auto;
+    }
+}
