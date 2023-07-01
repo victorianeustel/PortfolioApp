@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { data } from '../../../data/data';
 import './carousel.css';
 import { ChevronRightIcon, ChevronLeftIcon } from '@radix-ui/react-icons';
-import { motion } from 'framer-motion';
 
 function Carousel({ dataID }) {
     const [index, setIndex] = useState(0);

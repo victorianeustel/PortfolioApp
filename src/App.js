@@ -4,7 +4,6 @@ import NotFound from './components/Navigation/notfound';
 import Home from './components/Home/home';
 import ProjectDetail from './components/ProjectDetails/projectdetail';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Test from './components/test';
 import Contact from './components/Navigation/contact';
 import About from './components/Navigation/about';
 import Links from './components/Navigation/links';
