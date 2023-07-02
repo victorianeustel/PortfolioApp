@@ -1,0 +1,265 @@
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 
+/////// DESKTOP CSS ///////
+*/
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    font-family: 'Prompt', sans-serif;
+    animation: fadeInAnimation 0.75s linear;
+}
+
+.leftside,
+.rightside {
+    height: 100vh;
+    width: 50vw;
+}
+
+/* 
+    DETAILS SIDE 
+*/
+.leftside {
+    display: flex;
+}
+
+.details-container {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 2vh;
+}
+
+.details-title {
+    height: 45vh;
+}
+
+.child-details {
+    height: fit-content;
+}
+
+.description-box {
+    margin-left: 7px;
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+.page-title {
+    font-size: 4rem;
+    text-align: left;
+}
+
+/* social links */
+.social-bar img {
+    height: 2rem;
+    padding-right: 0.5rem;
+    opacity: 35%;
+}
+
+.social-bar img:hover {
+
+    opacity: 65%;
+    cursor: pointer;
+}
+
+.social-bar {
+    padding-left: 0.25rem;
+    display: flex;
+    justify-content: left;
+    padding-bottom: 0.5rem;
+}
+
+/* TABLE */
+.info-table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.info-table th,
+td {
+    border-top: 1px solid black;
+    border-bottom: 1px solid #000000;
+}
+
+.info-table td {
+    padding: 7px;
+}
+
+.info-table tr {
+    font-size: 1.25rem;
+    /* font-weight: 300; */
+}
+
+.info-table tr td:nth-of-type(1) {
+    width: 50%;
+}
+
+/* top bar*/
+.home-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.home-bar:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+
+
+/* 
+    MEDIA SIDE 
+*/
+
+.rightside {
+    background-color: #b5c7c2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.header-image {
+    display: none;
+}
+
+.rightside img {
+    width: 80%;
+}
+
+.image-list {
+    display: none;
+}
+
+.about .rightside {
+    background-color: #b5c7c2;
+}
+
+.capstone .rightside {
+    background-color: #e2d6c0;
+}
+
+.jobapp .rightside {
+    background-color: #b5bbda;
+}
+
+.wordle .rightside {
+    background-color: #99aa9a;
+}
+
+.idlegame .rightside {
+    background-color: #8cb2b5;
+}
+
+
+/* 
+/////// MOBILE CSS ///////
+*/
+
+@media screen and (max-width:800px) {
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .rightside,
+    .leftside,
+    .details-title {
+        height: fit-content;
+    }
+
+    .details-title {
+        margin-bottom: 20%;
+    }
+    .about .details-title{
+        margin-bottom: 0;
+    }
+
+    .rightside {
+        display: none;
+    }
+
+    .leftside {
+        width: 100%;
+    }
+
+    .page-title {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .about .header-image {
+        display: flex;
+        justify-self: center;
+        width: 100%;
+        padding-bottom: 1rem;
+        left: auto;
+        right: auto;
+    }
+
+    .about .image-list {
+        display: none;
+    }
+
+    .image-list img {
+        width: 80%;
+        margin-bottom: 1rem;
+        box-shadow: 3px 3px 10px 7px rgb(228, 228, 228);;
+    }
+
+    .image-list-item {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .image-list {
+        list-style-position: inside;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-bar {
+        display: none;
+    }
+
+    .about .social-bar {
+        display: flex;
+    }
+
+    .info-table tr {
+        font-size: 1rem;
+    }
+
+    .info-table {
+        margin-bottom: 2rem;
+    }
+
+    .info-table tr td:nth-of-type(1) {
+        width: 30%;
+    }
+
+    .description-box {
+        font-size: 1.4rem;
+    }
+}

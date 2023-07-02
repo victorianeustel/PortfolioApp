@@ -1,0 +1,37 @@
+.not-found-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #bfcbc0;
+}
+
+.not-found-card{
+    background: white;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 2px solid #4b564c;
+    border-radius: 5px;
+}
+
+.link-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.help-section {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.help-section div{
+    padding-bottom: 20px;
+}
+
