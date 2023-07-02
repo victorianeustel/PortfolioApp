@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import './childpage.css';
+import '../../styles/global.css';
 import InfoPage from "./Info/Info";
 import { data } from "../../data/data";
 import NotFound from "../Navigation/notfound";
@@ -11,14 +12,14 @@ import useDocumentTitle from "../../actions/useDocumentTitle";
 
 function ChildPage() {
     const { id } = useParams();
-    useDocumentTitle( data[id].name + ' - Victoria Neustel');
+    useDocumentTitle(data[id].name + ' - Victoria Neustel');
 
     if (data[id] == null) {
         return <NotFound></NotFound>
     }
 
-
     return (
+        
         <ProjectContext.Provider
             value={data[id]}
         >

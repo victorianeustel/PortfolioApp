@@ -1,39 +1,16 @@
 import React from "react";
 import './HomePage.css'
-import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { ref, onValue } from "firebase/database";
-import { db } from "../../database/storageConfig";
 
 
-function ProjectTable() {
-    const [data, setData] = useState([]);
+function ProjectTable(props) {
+    const {data} = props;
 
     let navigate = useNavigate();
     const routeChange = (key) => {
         let path = 'projects/' + key;
         navigate(path, { state: { key: key } });
     }
-
-    useEffect(() => {
-        const dbRef = ref(db, 'data');
-
-        const fetchData = (snapshot) => {
-            let records = [];
-            snapshot.forEach((childSnapshot) => {
-                let keyName = childSnapshot.key;
-                let data = childSnapshot.val();
-                records.push({ key: keyName, data: data });
-            });
-            setData(records);
-        };
-
-        const handleData = onValue(dbRef, fetchData);
-
-        return () => {
-            handleData(); // Clean up the event listener when the component unmounts
-        };
-    }, []);
 
     return (
         <table className="data-table">
