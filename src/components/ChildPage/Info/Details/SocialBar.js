@@ -6,35 +6,27 @@ import linkedin from '../../../../assets/linkedinlogo.png'
 
 function SocialBar({ git, repolink, linked, mail }) {
 
-    const handleGitClick = () => {
-        window.location.replace(repolink);
-    };
+    const openInNewTab = (url) => {
+        window.open(url, "_blank", "noreferrer");
+      };
 
-    const handleLinkedin = () => {
-        const linkedLink = 'https://www.linkedin.com/in/victoria-neustel/';
-        window.location.replace(linkedLink);
-    };
-    const handleEmailClick = () => {
-        const linkedLink = 'mailto:victoria.neustel@outlook.com';
-        window.location.replace(linkedLink);
-    };
     return (
         <div className="social-bar">
             {
                 mail ?
-                    <img src={email} onClick={handleEmailClick} />
+                    <img src={email} onClick={() => openInNewTab('mailto:victoria.neustel@outlook.com')} />
                     :
                     <></>
             }
             {
                 git ?
-                    <img src={github} onClick={handleGitClick} />
+                    <img src={github} onClick={() => openInNewTab(repolink)} />
                     :
                     <></>
             }
             {
                 linked ?
-                    <img src={linkedin} onClick={handleLinkedin} />
+                    <img src={linkedin} onClick={() => openInNewTab('https://www.linkedin.com/in/victoria-neustel/')} />
                     :
                     <></>
             }
