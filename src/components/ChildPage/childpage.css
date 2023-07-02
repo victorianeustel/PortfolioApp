@@ -213,5 +213,11 @@ td {
         align-items: center;
     }
 
+    .social-bar {
+        display: none;
+    }
 
+    .about .social-bar {
+        display: flex;
+    }
 }

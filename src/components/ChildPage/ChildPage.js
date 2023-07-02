@@ -8,6 +8,7 @@ import DetailHeader from "./Info/Header/Header";
 import Details from "./Info/Details/details";
 import NotFound from "../Navigation/notfound";
 import Carousel from "./Media/Carousel/carousel";
+import { ProjectContext } from "./ProjectContext";
 
 import useDocumentTitle from "../../actions/useDocumentTitle";
 
@@ -23,23 +24,24 @@ function ChildPage() {
         return <NotFound></NotFound>
     }
     return (
-        <div className={`flex-container ${data[id].id}`}>
-            <div class="leftside">
-                <InfoPage item={data[id]} />
+        // <ProjectContext.Provider
+        //     value={data[id]}
+        // >
 
+            <div className={`flex-container ${data[id].id}`}>
+                <div class="leftside">
+
+                    <InfoPage item={data[id]} />
+
+                </div>
+                <div className="rightside">
+
+                    <Carousel images={data[id].images}></Carousel>
+
+                </div>
             </div>
-            <div className="rightside">
-                {data[id].id == "about" ? 
-                
-                <img src={about.images[0]} alt="Logo" />
 
-                : 
-                <Carousel images={data[id].images}></Carousel>
-
-                
-                }
-            </div>
-        </div>
+        // </ProjectContext.Provider>
     )
 }
 

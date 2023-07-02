@@ -7,9 +7,21 @@ import { about } from "../../../../data/data";
 function Details(props) {
     const { item } = props;
 
+    console.log("REPO", item.repo);
+
     return (
         <div className="child-details">
-            <SocialBar />
+            {
+                item.id == "about" && 
+                <SocialBar git={true} repolink={'https://github.com/victorianeustel'}linked={true} mail={true}/>
+
+            }
+            {
+                item.repo == null ?
+                    <SocialBar/>
+                    :
+                    <SocialBar git={true} repolink={item.repo}  />
+            }
             <InfoTable item={item.details} />
             <div className="description-box">
                 {item.description}
@@ -19,7 +31,7 @@ function Details(props) {
                     console.log(item);
 
                     return (
-                        <div key={key}className="image-list-item">
+                        <div key={key} className="image-list-item">
                             <img src={item.link}></img>
                             <div> {item.description}</div>
                         </div>
