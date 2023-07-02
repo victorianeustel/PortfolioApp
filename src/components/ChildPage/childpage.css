@@ -2,9 +2,6 @@
     0% {
       opacity: 0;
     }
-    /* 90% {
-        opacity: 0.2;
-    } */
     100% {
       opacity: 1;
     }
@@ -55,6 +52,7 @@
     margin-left: 7px;
     text-align: left;
     font-size: large;
+    white-space: pre-wrap; /* or pre-line */
 }
 
 .page-title {
@@ -148,6 +146,25 @@ td {
 
 .image-list{
     display: none;
+}
+
+.about .rightside {
+    background-color: #b5c7c2;
+}
+
+.capstone .rightside{
+    background-color: #e2d6c0;
+}
+.jobapp .rightside{
+    background-color: #b5bbda;
+}
+
+.wordle .rightside {
+    background-color: #99aa9a;
+}
+
+.idlegame .rightside {
+    background-color: #8cb2b5;
 }
 
 

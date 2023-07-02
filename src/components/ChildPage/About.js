@@ -1,29 +1,34 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
 import './childpage.css';
-import logo from '../../data/Mexico41.jpg';
 import InfoPage from "./Info/Info";
-import { data, about } from "../../data/data";
-import DetailHeader from "./Info/Header/Header";
-import Details from "./Info/Details/details";
-import NotFound from "../Navigation/notfound";
-import Carousel from "./Media/Carousel/carousel";
+import { about } from "../../data/data";
+import Carousel from "./Media/carousel";
 
 import useDocumentTitle from "../../actions/useDocumentTitle";
+import { ProjectContext } from "./ProjectContext";
 
 function About() {
+    useDocumentTitle( 'About - Victoria Neustel');
 
-    console.log(about.images);
     return (
-        <div className={`flex-container ${about.id}`}>
-            <div class="leftside">
-                <InfoPage item={about} />
+        <ProjectContext.Provider
+            value={about}
+        >
 
+            <div className={`flex-container ${about.id}`}>
+                <div class="leftside">
+
+                    <InfoPage />
+
+                </div>
+                <div className="rightside">
+
+                    <Carousel />
+
+                </div>
             </div>
-            <div className="rightside">
-                <Carousel images={about.images}></Carousel>
-            </div>
-        </div>
+
+         </ProjectContext.Provider>
     )
 }
 

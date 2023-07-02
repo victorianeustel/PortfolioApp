@@ -1,47 +1,42 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import './childpage.css';
-import logo from '../../data/Mexico41.jpg';
 import InfoPage from "./Info/Info";
-import { data, about } from "../../data/data";
-import DetailHeader from "./Info/Header/Header";
-import Details from "./Info/Details/details";
+import { data } from "../../data/data";
 import NotFound from "../Navigation/notfound";
-import Carousel from "./Media/Carousel/carousel";
+import Carousel from "./Media/carousel";
 import { ProjectContext } from "./ProjectContext";
 
 import useDocumentTitle from "../../actions/useDocumentTitle";
 
-function handleClick() {
-    const gitLink = 'https://github.com/victorianeustel';
-    window.location.replace(gitLink);
-}
-
 function ChildPage() {
     const { id } = useParams();
+    useDocumentTitle( data[id].name + ' - Victoria Neustel');
 
     if (data[id] == null) {
         return <NotFound></NotFound>
     }
+
+
     return (
-        // <ProjectContext.Provider
-        //     value={data[id]}
-        // >
+        <ProjectContext.Provider
+            value={data[id]}
+        >
 
             <div className={`flex-container ${data[id].id}`}>
                 <div class="leftside">
 
-                    <InfoPage item={data[id]} />
+                    <InfoPage />
 
                 </div>
                 <div className="rightside">
 
-                    <Carousel images={data[id].images}></Carousel>
+                    <Carousel />
 
                 </div>
             </div>
 
-        // </ProjectContext.Provider>
+         </ProjectContext.Provider>
     )
 }
 

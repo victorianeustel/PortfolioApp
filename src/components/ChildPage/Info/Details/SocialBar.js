@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import '../../childpage.css';
 import email from '../../../../assets/emaillogo.png'
 import github from '../../../../assets/githublogo.png'

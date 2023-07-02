@@ -1,26 +1,14 @@
-import React, { useEffect, useState } from 'react';
-// import {data} from '../../../../data'
-import './carousel.css';
+import React, { useState } from 'react';
+import './carousel.css'
 import { ChevronRightIcon, ChevronLeftIcon } from '@radix-ui/react-icons';
+import { ProjectContext } from '../ProjectContext';
+import { useContext } from 'react';
 
-function Carousel(props) {
-    const {images} = props;
+function Carousel() {
+    const images = useContext(ProjectContext).images;
 
     const [index, setIndex] = useState(0);
     const length = images.length;
-
-    console.log("test",images);
-
-    //rerendering for change of dataID detail page
-    // useEffect(() => {
-    // }, [dataID]);
-
-    //preloading images
-    useEffect(() => {
-        images.forEach((picture) => {
-            new Image().src = picture.fileName;
-        })
-    })
 
     const handlePrevious = () => {
         const newIndex = index - 1;
@@ -35,10 +23,10 @@ function Carousel(props) {
     return (
         <div className="carousel">
             {images.length === 1 ?
-            
+
                 <div className="carousel">
                     <div className='carousel-images' alt={images.description} >
-                        <img src={images[0].link}></img>
+                        <img src={images[0].link} alt={images[0].description}></img>
                         <div>{images[0].description}</div>
                     </div>
                 </div>
@@ -57,7 +45,7 @@ function Carousel(props) {
                     </div>
 
                     <ChevronRightIcon onClick={handleNext} className='carousel-buttons' />
-                
+
                 </div>
             }
         </div>

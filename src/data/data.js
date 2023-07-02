@@ -6,10 +6,10 @@ export const data =
       "year": "2023",
       "description": "This year's Microsoft and NDSU Agriculture capstone project objective is to develop a web application that can store, catalog, and report data from crop variety trials. The project aims to simplify the current challenge faced by NDSU Agriculture Plant Breeders and Researchers in effectively managing and analyzing the vast amount of complex crop variety trial data collected from Research Extension Centers across North Dakota, which will eliminate the months of manual work that is currently required to complete these tasks.",
       "details": {
-        "type": "Senior Capstone Project",
-        "client": "Microsoft / NDSU Agriculture",
-        "date": "01/2023 - 05/2023",
-        "technology": [
+        "Type": "Senior Capstone Project",
+        "Client": "Microsoft / NDSU Agriculture",
+        "Date": "01/2023 - 05/2023",
+        "Technology": [
           "React",
           "ASP.NET",
           "Azure Data Lake",
@@ -45,9 +45,9 @@ export const data =
         {
           "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Capstone%2FScreenshot%202023-04-25%20at%207.26.08%20PM.png?alt=media&token=faf738b4-d12a-4974-9a52-f145b893ec5f",
           "description": "Upload file form.",
-        },
+        }
 
-      ],
+      ]
     },
     {
       "id": "jobapp",
@@ -55,10 +55,10 @@ export const data =
       "year": "2023",
       "description": "This application is designed to address the challenges of managing job applications and offering valuable resources for the interview process. By leveraging the capabilities of ChatGPT's API, OpenAI, the application communicates the job description and receives AI-generated responses in a JSON format, organized as an array of objects. Its current Artifical Intelligence functionalities include analyzing the job description to generate five possible interview questions and identifying the top 10 keywords within the description. This tool enables users to efficiently track and update the status of their job applications while also providing valuable preparation materials for a successful interview.",
       "details": {
-        "type": "Web Application",
-        "client": "Personal Project",
-        "date": "01/2023 - 05/2023",
-        "technology": [
+        "Type": "Web Application",
+        "Client": "Personal Project",
+        "Date": "01/2023 - 05/2023",
+        "Technology": [
           "React.js",
           "OpenAI",
           "Firebase Realtime"
@@ -77,8 +77,8 @@ export const data =
         {
           "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/JobTool%2FScreenshot%202023-06-29%20at%2012.44.26%20PM.png?alt=media&token=54bdd058-3cec-4bbd-822b-a0d521cbb7ee",
           "description": "New job application entry form to start tracking data."
-        },
-      ],
+        }
+      ]
 
     },
     {
@@ -93,15 +93,15 @@ export const data =
         "Technology": [
           "Angular",
           "Google Cloud SQL",
-          "Node.JS - Express",
-        ],
+          "Node.JS - Express"
+        ]
       },
       "repo": "https://github.com/victorianeustel/wordleContest",
       "images": [
         {
           "link": "https://firebasestorage.googleapis.com/v0/b/portfolioapp-aaa92.appspot.com/o/Wordle%2FIMG_8181.JPEG?alt=media&token=e4d78962-c143-4883-a5bc-58356ae71831",
           "description": "Score page with daily user scores and cumulative scoring placement.",
-        },
+        }
       ],
 
     },
@@ -116,7 +116,7 @@ export const data =
         "Date": "02/2022 - 05/2022",
         "Technology": [
           "Angular",
-          "Firebase Realtime",
+          "Firebase Realtime"
         ],
       },
       "link": "http://students.cs.ndsu.nodak.edu/~victoria.neustel/angular/project/",
@@ -140,7 +140,7 @@ export const about = {
   }],
   "details": {
     "Location": "Fargo, ND",
-    "Education": "B.S. in Computer Science /n North Dakota State University",
+    "Education": "B.S. in Computer Science, North Dakota State University",
     "Achievements": "Magna Cum Laude (3.73 / 4.00 GPA)"
   },
   "description": "Victoria Neustel is a talented and enthusiastic individual who recently graduated from North Dakota State University with a Bachelor of Science degree in Computer Science. With a passion for both technology and creativity, they have developed a diverse range of interests and hobbies. Outside of their academic pursuits and professional endeavors, Victoria finds joy in various activities that fuel their creative spirit. They have a keen interest in shooting and developing film photography, allowing them to capture unique moments and express their artistic vision. Additionally, Victoria has a knack for building electronics, utilizing their technical skills to bring ideas to life. They thrive on developing personal projects, using their expertise to create innovative solutions and explore new horizons. In their leisure time, Victoria cherishes moments spent with their beloved feline companions, as they find solace and happiness in their company. With their diverse range of interests and their dedication to computer science, Victoria Neustel is poised to make a significant impact in the world of technology and beyond."

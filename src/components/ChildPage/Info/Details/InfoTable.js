@@ -1,18 +1,27 @@
 import React from "react";
-import { data } from "../../../../data/data";
+import { useContext } from "react";
+import { ProjectContext } from "../../ProjectContext";
 
-function InfoTable(props) {
-    const { item } = props;
+function InfoTable() {
+
+    const item = useContext(ProjectContext).details;
 
     return (
         <table className="info-table">
             <tbody>
                 {Object.keys(item).map((key, i) => (
-                    <tr key={i}>
-                        <td>{key}</td>
-                        <td>{item[key]}</td>
-                    </tr>
-                ))}
+                    (key === "Technology") ?
+                        <tr key={i}>
+                            <td>{key}</td>
+                            <td>{item[key].join(", ")}</td>
+                        </tr>
+                        :
+                        <tr key={i}>
+                            <td>{key}</td>
+                            <td>{item[key]}</td>
+                        </tr>
+                )
+                )}
             </tbody>
         </table>
     )

@@ -3,9 +3,11 @@ import '../../childpage.css';
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { about } from "../../../../data/data";
 import { useNavigate } from "react-router-dom";
+import { ProjectContext } from "../../ProjectContext";
+import { useContext } from "react";
 
-function DetailHeader(props) {
-    const { item } = props;
+function DetailHeader() {
+    const item = useContext(ProjectContext);
 
     let navigate = useNavigate();
     const routeChange = () => {

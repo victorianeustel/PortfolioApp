@@ -2,17 +2,16 @@ import React from "react";
 import '../../childpage.css';
 import InfoTable from "./InfoTable";
 import SocialBar from "./SocialBar";
-import { about } from "../../../../data/data";
+import { ProjectContext } from "../../ProjectContext";
+import { useContext } from "react";
 
-function Details(props) {
-    const { item } = props;
-
-    console.log("REPO", item.repo);
+function Details() {
+    const item = useContext(ProjectContext);
 
     return (
         <div className="child-details">
             {
-                item.id == "about" && 
+                item.id === "about" && 
                 <SocialBar git={true} repolink={'https://github.com/victorianeustel'}linked={true} mail={true}/>
 
             }
@@ -28,11 +27,9 @@ function Details(props) {
             </div>
             <div className="image-list">
                 {item.images.map((item, key) => {
-                    console.log(item);
-
                     return (
                         <div key={key} className="image-list-item">
-                            <img src={item.link}></img>
+                            <img src={item.link} alt={item.description}></img>
                             <div> {item.description}</div>
                         </div>
                     )
