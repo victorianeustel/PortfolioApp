@@ -1,34 +1,53 @@
 import React from "react";
 import '../ChildPage/childpage.css'
 import InfoPage from "../ChildPage/Info/Info";
-import { about } from "../../Data/data";
 import Carousel from "../ChildPage/Carousel/carousel";
+import { useState, useEffect } from "react";
+import { ref, get } from "firebase/database";
+import { db } from "../../Database/storageConfig";
+import Loader from "../LoaderPage/Loader";
 
 import useDocumentTitle from "../../Actions/useDocumentTitle";
-import { ProjectContext } from "../ChildPage/ProjectContext";
 
 function About() {
-    useDocumentTitle( 'About - Victoria Neustel');
+    useDocumentTitle('About - Victoria Neustel');
+    const [about, setAbout] = useState();
+    const [isLoaded, setIsLoaded] = useState(false);
 
+    useEffect(() => {
+        const fetchAbout = async () => {
+
+            const snapshot = await get(ref(db, 'about'));
+            const aboutVal = await snapshot.val();
+
+            setAbout(aboutVal);
+            setIsLoaded(true);
+        }
+
+        fetchAbout();
+    }, [])
+
+    if (!isLoaded) {
+        return (
+            <Loader />
+        )
+    }
+    
     return (
-        <ProjectContext.Provider
-            value={about}
-        >
 
-            <div className={`flex-container ${about.id}`}>
-                <div class="leftside">
+        <div className={`flex-container ${about.id}`}>
+            <div class="leftside">
 
-                    <InfoPage />
+                <InfoPage item={about}/>
 
-                </div>
-                <div className="rightside">
-
-                    <Carousel />
-
-                </div>
             </div>
+            <div className="rightside">
 
-         </ProjectContext.Provider>
+                <Carousel images={about.images}/>
+
+            </div>
+        </div>
+
     )
 }
 

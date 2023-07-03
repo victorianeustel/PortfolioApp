@@ -2,11 +2,11 @@ import React from "react";
 import '../../childpage.css';
 import InfoTable from "./InfoTable";
 import SocialBar from "./SocialBar";
-import { ProjectContext } from "../../ProjectContext";
+import { ProjectContext } from "../../../../Context/ProjectContext";
 import { useContext } from "react";
 
-function Details() {
-    const item = useContext(ProjectContext);
+function Details(props) {
+    const {item} = props;
 
     return (
         <div className="child-details">

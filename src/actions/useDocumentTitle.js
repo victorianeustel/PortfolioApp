@@ -1,4 +1,4 @@
-// useDocumentTitle.js
+// change document title (tab-title)
 import { useRef, useEffect } from 'react'
 
 function useDocumentTitle(title) {

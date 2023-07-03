@@ -10,13 +10,14 @@ import './HomePage.css';
 import '../../Styles/global.css';
 
 function HomePage() {
-    const [isLoaded, setIsLoaded] = useState(false);
+    const [isDataLoaded, setIsDataLoaded] = useState(false);
     const [data, setData] = useState();
 
     useEffect(() => {
+
         const dbRef = ref(db, 'data');
 
-        const fetchData = (snapshot) => {
+        function fetchData(snapshot) {
             let records = [];
             snapshot.forEach((childSnapshot) => {
                 let keyName = childSnapshot.key;
@@ -24,9 +25,8 @@ function HomePage() {
                 records.push({ key: keyName, data: data });
             });
             setData(records);
-            setIsLoaded(true);
+            setIsDataLoaded(true);
         };
-
         const handleData = onValue(dbRef, fetchData);
 
         return () => {
@@ -34,13 +34,13 @@ function HomePage() {
         };
     }, []);
 
-    if (isLoaded) {
+    if (isDataLoaded ) {
         return (
 
             <div className="home-container">
-                <div class="top">
-                    <Header />
-                </div>
+                    <div class="top">
+                        <Header />
+                    </div>
                 <div className="bottom">
                     <ProjectTable data={data} />
                 </div>
@@ -53,7 +53,7 @@ function HomePage() {
         return (
 
             <Loader />
-            
+
         )
     }
 

@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './carousel.css'
 import { ChevronRightIcon, ChevronLeftIcon } from '@radix-ui/react-icons';
-import { ProjectContext } from '../ProjectContext';
-import { useContext } from 'react';
 import cacheImages from '../../../Actions/cacheImages';
 
 function Carousel(props) {
-    const images = useContext(ProjectContext).images;
+    const {images} = props;
 
     const [index, setIndex] = useState(0);
     const length = images.length;
