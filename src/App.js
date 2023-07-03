@@ -5,10 +5,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ChildPage from './Pages/ChildPage/ChildPage';
 import About from './Pages/About/About';
 import HomePage from './Pages/HomePage/Home';
-import { AboutContext } from './Context/AboutContext';
-import { useEffect, useState } from 'react';
-import { ref, get } from 'firebase/database';
-import { db } from './Database/storageConfig';
 
 function App() {
 

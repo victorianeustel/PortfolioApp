@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { data } from "../../Data/data";
-import { ProjectContext } from "../../Context/ProjectContext";
 
 import NotFound from "../NotFound/notfound";
-import Carousel from "./Carousel/carousel";
 import InfoPage from "./Info/Info";
 import Loader from "../LoaderPage/Loader";
 import cacheImages from "../../Actions/cacheImages";
+import ImageSlider from "./Carousel/carousel";
 
 import './childpage.css';
 import '../../Styles/global.css';
 
 import useDocumentTitle from "../../Actions/useDocumentTitle";
-
 
 function ChildPage() {
     const { id } = useParams();
@@ -25,7 +23,8 @@ function ChildPage() {
     useEffect(() => {
         let imgsArr = [];
         data[id].images.map(({ link, description }) => {
-            imgsArr.push(link);
+            return (
+                imgsArr.push(link))
         })
 
         cacheImages(imgsArr, setIsLoaded);
@@ -46,18 +45,18 @@ function ChildPage() {
         return (
 
 
-                <div className={`flex-container ${data[id].id}`}>
-                    <div class="leftside">
+            <div className={`flex-container ${data[id].id}`}>
+                <div class="leftside">
 
-                        <InfoPage item={data[id]}/>
+                    <InfoPage item={data[id]} />
 
-                    </div>
-                    <div className="rightside">
-
-                        <Carousel images={data[id].images}/>
-
-                    </div>
                 </div>
+                <div className="rightside">
+
+                    <ImageSlider images={data[id].images} />
+
+                </div>
+            </div>
 
         )
     }

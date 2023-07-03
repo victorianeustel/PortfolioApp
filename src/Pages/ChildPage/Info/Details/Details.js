@@ -2,8 +2,6 @@ import React from "react";
 import '../../childpage.css';
 import InfoTable from "./InfoTable";
 import SocialBar from "./SocialBar";
-import { ProjectContext } from "../../../../Context/ProjectContext";
-import { useContext } from "react";
 
 function Details(props) {
     const {item} = props;
