@@ -1,8 +1,6 @@
 import React from "react";
 import './HomePage.css'
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-// import { about } from "../../Data/data";
-
 
 function LeftHeader() {
 

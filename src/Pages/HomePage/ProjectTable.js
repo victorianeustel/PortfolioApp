@@ -4,12 +4,13 @@ import { useNavigate } from "react-router-dom";
 
 
 function ProjectTable(props) {
-    const {data} = props;
+    const { data } = props;
 
     let navigate = useNavigate();
-    const routeChange = (key) => {
-        let path = 'projects/' + key;
-        navigate(path, { state: { key: key } });
+
+    const routeChange = (key, name) => {
+        let path = 'projects/' + key + "/" + name;
+        navigate(path, { state: { key: key }, params: {name: name}});
     }
 
     return (
@@ -25,7 +26,7 @@ function ProjectTable(props) {
             <tbody>
                 {data.map((event, key) => {
                     return (
-                        <tr key={key} onClick={() => routeChange(key)}>
+                        <tr key={key} onClick={() => routeChange(key, event.data.name)}>
                             <td id="name">{event.data.name}</td>
                             <td id="type">{event.data.type}</td>
                             <td id="location">{event.data.client}</td>

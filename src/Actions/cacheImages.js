@@ -1,5 +1,5 @@
 //preload images 
-const cacheImages = async (srcArray, setIsLoaded) => {
+const cacheImages = async (srcArray, setIsImagesLoaded) => {
     const promises = await srcArray.map((src) => {
         return new Promise(function (resolve, reject) {
             const img = new Image();
@@ -11,7 +11,7 @@ const cacheImages = async (srcArray, setIsLoaded) => {
     });
     await Promise.all(promises);
 
-    setIsLoaded(true);
+    setIsImagesLoaded(true);
 };
 
 export default cacheImages

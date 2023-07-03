@@ -8,20 +8,22 @@ function InfoTable(props) {
         <table className="info-table">
 
             <tbody>
+                {
+                    item.map((detail) => (
+                        <tr  key={detail.id}>
+                            <td>{detail.key}</td>
+                            {detail.key === "Technology" 
 
-                {Object.keys(item).map((key, i) => (
-                    (key === "Technology")
-                        ? <tr key={i}>
-                            <td>{key}</td>
-                            <td>{item[key].join(", ")}</td>
+                            ? <td>{(detail.value).join(", ")}</td> 
+
+                            : <td>{detail.value}</td>
+
+                            }
                         </tr>
+                    ))
 
-                        : <tr key={i}>
-                            <td>{key}</td>
-                            <td>{item[key]}</td>
-                        </tr>
+                }
 
-                ))}
 
             </tbody>
 

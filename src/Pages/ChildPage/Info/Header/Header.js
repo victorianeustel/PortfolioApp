@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import { about } from "../../../../Data/data";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 
 import '../../childpage.css';
@@ -24,7 +23,7 @@ function DetailHeader(props) {
 
             <div className="page-title">{item.name}</div>
 
-            <img className="header-image" src={item.images[0].link} alt={about.images[0].description}/>
+            <img className="header-image" src={item.images[0].link} alt={item.images[0].description}/>
             
         </div>
     )

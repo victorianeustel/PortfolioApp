@@ -1,6 +1,5 @@
 import React from "react";
 import './HomePage.css';
-import { about } from "../../Data/data";
 import LeftHeader from "./LeftHeader";
 import logo from '../../Data/header-art.jpg'
 

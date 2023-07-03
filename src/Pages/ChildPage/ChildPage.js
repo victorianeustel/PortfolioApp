@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { data } from "../../Data/data";
+// import { data } from "../../Data/data";
 
 import NotFound from "../NotFound/notfound";
 import InfoPage from "./Info/Info";
@@ -8,34 +8,62 @@ import Loader from "../LoaderPage/Loader";
 import cacheImages from "../../Actions/cacheImages";
 import ImageSlider from "./Carousel/carousel";
 
+import { db } from "../../Database/storageConfig";
+import { ref, get } from "firebase/database";
+
 import './childpage.css';
 import '../../Styles/global.css';
 
 import useDocumentTitle from "../../Actions/useDocumentTitle";
 
 function ChildPage() {
-    const { id } = useParams();
+    const { id, name } = useParams();
 
-    const [isLoaded, setIsLoaded] = useState(false);
+    const [data, setData] = useState();
+    const [error, setError] = useState();
+    const [images, setImages] = useState();
+    const [isImagesLoaded, setIsImagesLoaded] = useState(false);
+    const [isDataLoaded, setIsDataLoaded] = useState(false);
 
-    useDocumentTitle(data[id].name + ' - Victoria Neustel');
+    useDocumentTitle(name + ' - Victoria Neustel');
 
     useEffect(() => {
-        let imgsArr = [];
-        data[id].images.map(({ link, description }) => {
-            return (
-                imgsArr.push(link))
-        })
+        const fetchData = async () => {
+            try {
+                const snapshot = await get(ref(db, 'data/' + id));
+                const aboutVal = await snapshot.val();
 
-        cacheImages(imgsArr, setIsLoaded);
-    }, []);
+                setData(aboutVal);
+                setIsDataLoaded(true);
+            }
+            catch (e) {
+                return (
+                    <NotFound />
+                )
+            }
+        }
 
+        fetchData();
+        
+    }, [])
 
-    if (data[id] == null) {
+    useEffect(() => {
+        if (isDataLoaded){
+            let imgsArr = [];
+            data.images.map(({ link, description }) => {
+                return (
+                    imgsArr.push(link))
+            })
+            cacheImages(imgsArr, setIsImagesLoaded);
+        }
+    }, [isDataLoaded]);
+
+    if (error != null) {
         return <NotFound></NotFound>
     }
 
-    if (!isLoaded) {
+    else if (!isDataLoaded || !isImagesLoaded
+    ) {
         return (
             <Loader />
         )
@@ -45,15 +73,15 @@ function ChildPage() {
         return (
 
 
-            <div className={`flex-container ${data[id].id}`}>
+            <div className={`flex-container ${data.id}`}>
                 <div class="leftside">
 
-                    <InfoPage item={data[id]} />
+                    <InfoPage item={data} />
 
                 </div>
                 <div className="rightside">
 
-                    <ImageSlider images={data[id].images} />
+                    <ImageSlider images={data.images} />
 
                 </div>
             </div>

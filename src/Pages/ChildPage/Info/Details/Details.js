@@ -4,7 +4,7 @@ import InfoTable from "./InfoTable";
 import SocialBar from "./SocialBar";
 
 function Details(props) {
-    const {item} = props;
+    const { item } = props;
 
     return (
         <div className="child-details">
@@ -21,11 +21,13 @@ function Details(props) {
             }
 
 
-            <InfoTable item={item.details} />
+            <InfoTable item={item.aboutDetails} />
+
 
             <div className="description-box">
                 {item.description}
             </div>
+
 
             <div className="image-list">
                 {item.images.map((item, key) => {
@@ -37,7 +39,7 @@ function Details(props) {
                     )
                 })}
             </div>
-            
+
         </div>
     )
 }
