@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import './carousel.css'
 import { ChevronRightIcon, ChevronLeftIcon } from '@radix-ui/react-icons';
-import cacheImages from '../../../Actions/cacheImages';
 
 function Carousel(props) {
-    const {images} = props;
+    const { images } = props;
 
     const [index, setIndex] = useState(0);
     const length = images.length;
@@ -20,13 +19,13 @@ function Carousel(props) {
     };
 
     return (
-        <div className="carousel">
+        <>
             {images.length === 1 ?
 
-                <div className="carousel">
+                <div className="carousel single">
 
-                    <div className='carousel-images' alt={images.description} >
-
+                    <div className='single-image' >
+                        
                         <img src={images[0].link} alt={images[0].description}></img>
                         <div>{images[0].description}</div>
 
@@ -36,7 +35,7 @@ function Carousel(props) {
 
                 :
 
-                <div className="carousel">
+                <div className="carousel multi">
 
                     <ChevronLeftIcon onClick={handlePrevious} className="carousel-buttons" />
 
@@ -52,7 +51,7 @@ function Carousel(props) {
 
                 </div>
             }
-        </div>
+        </>
     );
 };
 

@@ -1,9 +1,10 @@
 .loader-container {
     background-color: white;
     width: 100vw;
-    height: 50vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     animation: fadeInAnimation 0.5s linear;
   }
   
