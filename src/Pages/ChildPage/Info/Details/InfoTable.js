@@ -10,13 +10,13 @@ function InfoTable(props) {
             <tbody>
                 {
                     item.map((detail) => (
-                        <tr  key={detail.id}>
+                        <tr key={detail.id}>
                             <td>{detail.key}</td>
-                            {detail.key === "Technology" 
+                            {detail.key === "Technology"
 
-                            ? <td>{(detail.value).join(", ")}</td> 
+                                ? <td>{(detail.value).join(", ")}</td>
 
-                            : <td>{detail.value}</td>
+                                : <td>{detail.value}</td>
 
                             }
                         </tr>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-// import { data } from "../../Data/data";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import NotFound from "../NotFound/notfound";
 import InfoPage from "./Info/Info";
@@ -21,9 +21,9 @@ function ChildPage() {
 
     const [data, setData] = useState();
     const [error, setError] = useState();
-    const [images, setImages] = useState();
     const [isImagesLoaded, setIsImagesLoaded] = useState(false);
     const [isDataLoaded, setIsDataLoaded] = useState(false);
+    // const [showFullscreen, setShowFullscreen] = useState(false);
 
     useDocumentTitle(name + ' - Victoria Neustel');
 
@@ -44,11 +44,11 @@ function ChildPage() {
         }
 
         fetchData();
-        
+
     }, [])
 
     useEffect(() => {
-        if (isDataLoaded){
+        if (isDataLoaded) {
             let imgsArr = [];
             data.images.map(({ link, description }) => {
                 return (
@@ -79,9 +79,12 @@ function ChildPage() {
                     <InfoPage item={data} />
 
                 </div>
+
                 <div className="rightside">
 
-                    <ImageSlider images={data.images} />
+                    <ImageSlider images={data.images} 
+                    // setShowFullscreen={setShowFullscreen} 
+                    />
 
                 </div>
             </div>

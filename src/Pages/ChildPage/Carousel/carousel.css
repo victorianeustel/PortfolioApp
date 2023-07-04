@@ -7,19 +7,29 @@
     position: relative;
 
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
 
-    animation: fadeInAnimation 0.5s linear;
+    /* animation: fadeInAnimation 0.5s linear; */
 
 }
+
+::selection{
+    background-color: #e8e80e;
+    color: black;
+}
+
+
 
 /* image column */
 .image-column {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 #image-header,
@@ -27,10 +37,13 @@
     text-align: center;
     position: absolute;
     color: white;
+
+    user-select: none;
 }
 
 #image-header {
     top: 0;
+    display: inline-flex;
 }
 
 #image-description {
@@ -45,9 +58,10 @@
     text-align: left;
     min-width: 60px;
     min-height: 40px;
-    width: 40vw;
-    height: 25vw;
+    width: 45vw;
+    height: 30vw;
     overflow: hidden;
+    
 }
 
 .image-wrapper img {
@@ -56,22 +70,65 @@
     display: block; 
     position: absolute;
     object-fit: fit;
+
+    user-select: none;
 }
 
 
-/* carousel buttons */
-.image-slider-button {
-    color: white;
-    width: 2vw;
-    height: auto;
-    min-width: 25px;
+/* 
+
+CAROUSEL BUTTONS 
+
+*/
+.slider-button-container{
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
 }
 
-.image-slider-button:hover {
-    opacity: 50%;
+button {
+    border: none;
+    border-radius: 0;
+    background: none;
+    font: inherit;
+    padding: 0;
     cursor: pointer;
+    color: currentColor;
+    z-index: 4;
 }
 
+#showFullscreen{
+    margin-left: 0.9em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-arrow{
+    height: 0.8em;
+    width: auto;
+    margin-right: 0.8em;
+    display: inline;
+}
+
+.slider-button {
+    z-index: 3;
+    width: 50%;
+    height: 100vh;
+    cursor: url('../../../Assets/Arrows/arrow-left-white.svg'), auto;
+}
+
+.prev {
+    cursor: url('../../../Assets/Arrows/arrow-left-white.svg'), auto;
+}
+.next {
+    cursor: url('../../../Assets/Arrows/arrow-white.svg'), auto;
+}
 
 /* single image */
 .single-image{
@@ -131,3 +188,4 @@
     transform: translateX(100%);
     transition: transform 300ms ease-in-out;
 }
+
