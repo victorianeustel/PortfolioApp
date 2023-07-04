@@ -153,23 +153,23 @@
 
 
 /* custom background */
-.about .image-slider {
+.about .rightside {
     background-color: #b5c7c2;
 }
 
-.capstone .image-slider {
+.capstone .rightside {
     background-color: #9b9583;
 }
 
-.jobapp .image-slider {
+.jobapp .rightside {
     background-color: #8388a1;
 }
 
-.wordle .image-slider {
+.wordle .rightside {
     background-color: #5e695f;
 }
 
-.idlegame .image-slider {
+.idlegame .rightside {
     background-color: #4c7072;
 }
 

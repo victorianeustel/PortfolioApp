@@ -10,11 +10,7 @@
     max-width: 100vw;
 
     height: 100vh;
-
     width: auto;
-
-    /* animation: fadeInAnimation 0.5s linear; */
-
 }
 
 ::selection{
@@ -32,8 +28,15 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 3em;
-    margin-bottom: 3em;
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    width: 100%;
+    height: calc(100vh-2em);
+
+    transition: width 1s ease-in-out 1s;
+    
 }
 
 #image-header,
@@ -41,8 +44,6 @@
     text-align: center;
     position: absolute;
     color: white;
-
-    user-select: none;
 }
 
 #image-header {
@@ -52,20 +53,28 @@
 
 #image-description {
     bottom: 0;
+    z-index: 4;
+    cursor: text;
 }
-
 
 /* images */
 .image-wrapper {
     display: flex;
     position: relative;
     text-align: left;
-    min-width: 60px;
-    min-height: 40px;
+    overflow: hidden;
+
+    /* 3: 2*/
     width: 45vw;
     height: 30vw;
-    overflow: hidden;
-    
+    transition: transform 300ms ease-in-out;
+}
+
+.fullscreen-true .image-wrapper {
+    /* ratio 3:2 */
+    transform: scale(1.1,1.1);
+    min-height: 540px;
+    min-width: 810px;
 }
 
 .image-wrapper img {
@@ -74,25 +83,33 @@
     display: block; 
     position: absolute;
     object-fit: fit;
-
     user-select: none;
 }
 
 
-/* 
-
+/*  ============ 
 CAROUSEL BUTTONS 
-
-*/
+ ============*/
 .slider-button-container{
-    position: fixed;
+    display: flex;
+
     width: 50vw;
     height: 100vh;
+
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 2;
-    display: flex;
+    z-index: 3;
+
+}
+
+.fullscreen-true .slider-button-container {
+    width: 100vw;
+}
+
+.slider-button {
+    width: 50%;
 }
 
 button {
@@ -106,6 +123,10 @@ button {
     z-index: 4;
 }
 
+/* FULLSCREEN */
+.fullscreen-true{
+    width: 100vw;
+}
 
 #showFullscreen{
     margin-left: 0.9em;
@@ -118,8 +139,17 @@ button {
     position: absolute;
     top: 0;
     right: 0;
-    width: 3em;
-    height: 3em;
+    padding: 1em;
+    user-select: none;
+}
+
+#exit-fullscreen:hover{
+    opacity: 50%;
+}
+
+#exit-fullscreen img {
+    width: 20px;
+    height: 20px;
 }
 
 .small-arrow{
@@ -129,15 +159,13 @@ button {
     display: inline;
 }
 
+/* SLIDER ACTION BUTTONS*/
+
 .slider-button {
     z-index: 3;
     width: 50%;
     height: 100vh;
     cursor: url('../../../Assets/Arrows/arrow-left-white.svg'), auto;
-}
-
-.fullscreen-true{
-    width: 100vw;
 }
 
 .prev {
@@ -186,26 +214,10 @@ button {
 }
 
 
-
-
-/* TESTTTT */
-
-.test{
-    min-width: 50vw;
-    max-width: 100vw;
-    width: auto;
-    height: 100vh;
-    position: absolute;
-    right: 0;
-}
-
-#square{
-    background-color: red ;
-}
+/* ========= FULL SCREEN TRANSITIONS ========= */
 
 .test-enter {
     width: 50vw;
-    /* height: 100vh; */
     position: absolute;
     right: 0;
 
@@ -213,20 +225,14 @@ button {
 
 .test-enter-active {
     width: 100vw;
-    transition: width 2s;
-    /* height: 100vh; */
+    transition: width 500ms;
     position: absolute;
     right: 0;
-
-
-    /* transition: opacity 2000ms; */
 }
 
 .test-enter-done {
     width: 100vw;
     height: 100%;
-
-    /* height: 100vh; */
     position: absolute;
     right: 0;
 
@@ -235,28 +241,22 @@ button {
 .test-exit {
     width: 100vw;
     height: 100%;
-
-    /* height: 100vh; */
     position: absolute;
     right: 0;
-
 }
 
 .test-exit-active {
     width: 50vw;
     height: 100%;
-
-    /* height: 100vh; */
     position: absolute;
     right: 0;
 
-    transition: width 2s;
+    transition: width 500ms;
 }
 
 .test-exit-done {
     width: 50vw;
     height: 100%;
-    /* height: 100vh; */
     position: absolute;
     right: 0;
 

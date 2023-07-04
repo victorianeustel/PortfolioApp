@@ -1,4 +1,4 @@
-import './carousel.css';
+import './Style.css';
 import React, { useState } from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import leftarrow from '../../../Assets/Arrows/arrow-left-white.svg';
@@ -40,14 +40,14 @@ export default function ImageSlider(props) {
             //1. state (enter/exit - boolean)
             in={showFullscreen}
             //2. duration
-            timeout={5000}
+            timeout={1000}
             //3. classname 
             classNames="test"
         >
-            <div className="image-slider multi">
+            <div className={`image-slider fullscreen-${showFullscreen}`}>
                 {images.length != 1
                     ?
-                    <div class={`slider-button-container fullscreen-${showFullscreen}`}>
+                    <div class="slider-button-container">
                         <div
                             onClick={handlePrevious}
                             className="slider-button prev"
@@ -66,7 +66,7 @@ export default function ImageSlider(props) {
                 }
                 {showFullscreen ?
                     <button id="exit-fullscreen" onClick={handleFullScreen}>
-                        <img src={x} className='small-arrow' />
+                        <img src={x} />
                     </button>
                     :
                     null
@@ -75,9 +75,10 @@ export default function ImageSlider(props) {
 
 
                 <div className='image-column'>
-                    {images.length != 1
+                    {/* {images.length !== 1
 
-                        ? <div id='image-header' >
+                        ?  */}
+                        <div id='image-header' >
 
                             {index + 1} / {images.length}
                             {!showFullscreen
@@ -93,9 +94,9 @@ export default function ImageSlider(props) {
 
                         </div>
 
-                        : null
+                        {/* : null
 
-                    }
+                    } */}
 
                     <div className="image-wrapper">
 
