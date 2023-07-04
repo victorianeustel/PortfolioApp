@@ -25,7 +25,7 @@ function Details(props) {
 
 
             <div className="description-box">
-                {item.description}
+                {item.description.split('<br/>').join('\n\n')}
             </div>
 
 
