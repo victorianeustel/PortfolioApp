@@ -95,8 +95,6 @@
 .info-table tr {
     font-size: 1.3rem;
     border-top: 1px solid black;
-    /* border-bottom: 1px solid #000000; */
-    /* width: 50%; */
     overflow: hidden;
 
 }
@@ -104,7 +102,6 @@
 .info-table td {
     padding-top: 10px;
     padding-bottom: 10px;
-    /* white-space: pre-wrap; */
 }
 
 

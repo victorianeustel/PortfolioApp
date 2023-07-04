@@ -5,8 +5,6 @@ function InfoTable(props) {
 
     const { item } = props;
 
-    console.log(item);
-
     return (
         <table className="info-table">
 
@@ -20,8 +18,6 @@ function InfoTable(props) {
                                 ? <td className="BadgeRow">
                                     {
                                         detail.value.map((tech) => {
-                                            console.log(tech);
-                                            console.log(tech.replace(' ', '').replace('.', '').replace('-', ''));
                                             return (
                                                 <TechBadge name={tech} />
                                             )
@@ -30,13 +26,13 @@ function InfoTable(props) {
                                     {/* <span>
                                     {(detail.value).join(", ")}
                                     </span> */}
-                                    </td>
+                                </td>
 
                                 : <td>
                                     <span>
-                                    {detail.value}
+                                        {detail.value}
                                     </span>
-                                    </td>
+                                </td>
 
                             }
                         </tr>

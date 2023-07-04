@@ -20,7 +20,7 @@
     background-color: rgb(210, 190, 242);
 }
 
-.badge-AzureDevOps, .badge-AzureData {
+.badge-AzureDevOps, .badge-AzureDataLake {
     background-color: rgb(162, 190, 255);
 }
 
@@ -36,10 +36,10 @@
     background-color: rgb(255, 193, 193);
 }
 
-.badge-GoogleCloud {
+.badge-GoogleCloudSQL {
     background-color: rgb(255, 255, 160);
 }
 
-.badge-NodeJS{
+.badge-NodeJSExpress{
     background-color: rgb(177, 199, 179);
 }
