@@ -1,0 +1,47 @@
+.TechBadge{
+    font-size: smaller;
+    border: 1px solid black;
+    padding: 3px;
+    margin: 3px;
+    color: black;
+
+}
+
+
+
+.BadgeRow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.badge-React, .badge-Reactjs{
+    background-color: rgb(189, 236, 234);
+    
+}
+.badge-ASPNET {
+    background-color: rgb(210, 190, 242);
+}
+
+.badge-AzureDevOps, .badge-AzureData {
+    background-color: rgb(162, 190, 255);
+}
+
+.badge-OpenAI{
+    background-color: rgb(158, 222, 165);
+}
+
+.badge-FirebaseRealtime{
+    background-color: rgb(255, 215, 142);
+}
+
+.badge-Angular{
+    background-color: rgb(255, 193, 193);
+}
+
+.badge-GoogleCloud {
+    background-color: rgb(255, 255, 160);
+}
+
+.badge-NodeJS{
+    background-color: rgb(177, 199, 179);
+}

@@ -1,4 +1,3 @@
-import { useContext, createContext } from "react";
 import "./Style.css"
 
 function HandlePrevious(props) {
