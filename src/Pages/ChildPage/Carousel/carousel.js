@@ -2,7 +2,7 @@ import './Style.css';
 import React, { useState } from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import leftarrow from '../../../Assets/Arrows/arrow-left-white.svg';
-import x from '../../../Assets/Arrows/x.svg';
+import x from '../../../Assets/Arrows/x-white.svg';
 
 
 export default function ImageSlider(props) {
@@ -75,28 +75,26 @@ export default function ImageSlider(props) {
 
 
                 <div className='image-column'>
-                    {/* {images.length !== 1
 
-                        ?  */}
-                        <div id='image-header' >
+                    <div id='image-header' >
+                        {images.length !== 1
+                            ? <>{index + 1} / {images.length}</>
+                            : null
 
-                            {index + 1} / {images.length}
-                            {!showFullscreen
-                                ? 
-                                <button id="showFullscreen" onClick={handleFullScreen}>
-                                    <img src={leftarrow} className="small-arrow" />
-                                    Fullscreen
-                                </button>
-                                : 
-                                null
+                        }
 
-                            }
+                        {!showFullscreen
+                            ?
+                            <button id="showFullscreen" onClick={handleFullScreen}>
+                                <img src={leftarrow} className="small-arrow" />
+                                Fullscreen
+                            </button>
+                            :
+                            null
 
-                        </div>
+                        }
 
-                        {/* : null
-
-                    } */}
+                    </div>
 
                     <div className="image-wrapper">
 
