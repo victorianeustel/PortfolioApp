@@ -23,7 +23,7 @@ function ChildPage() {
     const [error, setError] = useState();
     const [isImagesLoaded, setIsImagesLoaded] = useState(false);
     const [isDataLoaded, setIsDataLoaded] = useState(false);
-    // const [showFullscreen, setShowFullscreen] = useState(false);
+    const [showFullscreen, setShowFullscreen] = useState(false);
 
     useDocumentTitle(name + ' - Victoria Neustel');
 
@@ -82,7 +82,7 @@ function ChildPage() {
 
                 <div className="rightside">
 
-                    <ImageSlider images={data.images} 
+                    <ImageSlider images={data.images}
                     // setShowFullscreen={setShowFullscreen} 
                     />
 

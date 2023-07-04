@@ -6,8 +6,12 @@
 
     position: relative;
 
-    width: 100vw;
+    min-width: 50vw;
+    max-width: 100vw;
+
     height: 100vh;
+
+    width: auto;
 
     /* animation: fadeInAnimation 0.5s linear; */
 
@@ -28,8 +32,8 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 #image-header,
@@ -102,11 +106,20 @@ button {
     z-index: 4;
 }
 
+
 #showFullscreen{
     margin-left: 0.9em;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+#exit-fullscreen{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3em;
+    height: 3em;
 }
 
 .small-arrow{
@@ -123,6 +136,10 @@ button {
     cursor: url('../../../Assets/Arrows/arrow-left-white.svg'), auto;
 }
 
+.fullscreen-true{
+    width: 100vw;
+}
+
 .prev {
     cursor: url('../../../Assets/Arrows/arrow-left-white.svg'), auto;
 }
@@ -130,29 +147,8 @@ button {
     cursor: url('../../../Assets/Arrows/arrow-white.svg'), auto;
 }
 
-/* single image */
-.single-image{
-    min-width: 50px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.single-image img {
-    width: 90% !important;
-}
-
-.single-image div {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    font-size: 1rem;
-}
-
-
-/* transforms */
+/* ===== CAROUSEL TRANSITIONS ======*/
 .slide-right-enter {
     transform: translateX(100%);
 }
@@ -189,3 +185,102 @@ button {
     transition: transform 300ms ease-in-out;
 }
 
+
+
+
+/* TESTTTT */
+
+.test{
+    min-width: 50vw;
+    max-width: 100vw;
+    width: auto;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+}
+
+#square{
+    background-color: red ;
+}
+
+.test-enter {
+    width: 50vw;
+    /* height: 100vh; */
+    position: absolute;
+    right: 0;
+
+}
+
+.test-enter-active {
+    width: 100vw;
+    transition: width 2s;
+    /* height: 100vh; */
+    position: absolute;
+    right: 0;
+
+
+    /* transition: opacity 2000ms; */
+}
+
+.test-enter-done {
+    width: 100vw;
+    height: 100%;
+
+    /* height: 100vh; */
+    position: absolute;
+    right: 0;
+
+}
+/* === Exit Transition === */
+.test-exit {
+    width: 100vw;
+    height: 100%;
+
+    /* height: 100vh; */
+    position: absolute;
+    right: 0;
+
+}
+
+.test-exit-active {
+    width: 50vw;
+    height: 100%;
+
+    /* height: 100vh; */
+    position: absolute;
+    right: 0;
+
+    transition: width 2s;
+}
+
+.test-exit-done {
+    width: 50vw;
+    height: 100%;
+    /* height: 100vh; */
+    position: absolute;
+    right: 0;
+
+
+}
+
+/* ===== CUSTOM BACKGROUND ======*/
+
+.about .image-slider {
+    background-color: #b5c7c2;
+}
+
+.capstone .image-slider {
+    background-color: #9b9583;
+}
+
+.jobapp .image-slider {
+    background-color: #8388a1;
+}
+
+.wordle .image-slider {
+    background-color: #5e695f;
+}
+
+.idlegame .image-slider {
+    background-color: #4c7072;
+}

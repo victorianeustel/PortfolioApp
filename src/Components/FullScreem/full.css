@@ -1,0 +1,81 @@
+.test-cont{
+    width: 100vw;
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* button{
+    z-index: 5;
+    width: 10%;
+    height: 5%;
+} */
+
+.test{
+    min-width: 50vw;
+    max-width: 100vw;
+    width: auto;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+}
+
+#square{
+    background-color: red ;
+}
+
+.test-enter {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+
+}
+
+.test-enter-active {
+    width: 100vw;
+    transition: width 2s;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+
+
+    /* transition: opacity 2000ms; */
+}
+
+.test-enter-done {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+
+}
+/* === Exit Transition === */
+.test-exit {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+
+}
+
+.test-exit-active {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+
+    transition: width 2s;
+}
+
+.test-exit-done {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+
+
+}
