@@ -12,34 +12,43 @@
     flex-wrap: wrap;
 }
 
+/* COLOR PALETTE 
+#B7BCBF
+#E8D4C6
+#C9C9C2
+#F2DBD5
+*/
+
+
 .badge-React, .badge-Reactjs{
-    background-color: rgb(189, 236, 234);
+    background-color: #ddbda6;
     
 }
 .badge-ASPNET {
-    background-color: rgb(210, 190, 242);
+    background-color: #CDD5C6;
 }
 
-.badge-AzureDevOps, .badge-AzureDataLake {
-    background-color: rgb(162, 190, 255);
+.badge-AzureDevOps {
+    background-color: #C9C9C2;
 }
 
+.badge-AzureDataLake,
 .badge-OpenAI{
-    background-color: rgb(158, 222, 165);
+    background-color: #d8d0ba;
 }
 
 .badge-FirebaseRealtime{
-    background-color: rgb(255, 215, 142);
+    background-color: #E8CDC5;
 }
 
 .badge-Angular{
-    background-color: rgb(255, 193, 193);
+    background-color: #c5d2d9;
 }
 
 .badge-GoogleCloudSQL {
-    background-color: rgb(255, 255, 160);
+    background-color: #cdb8b2;
 }
 
 .badge-NodeJSExpress{
-    background-color: rgb(177, 199, 179);
+    background-color: #CDD5C6;
 }

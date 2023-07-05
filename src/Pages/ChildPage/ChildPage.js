@@ -82,9 +82,7 @@ function ChildPage() {
 
                 <div className="rightside">
 
-                    <ImageSlider images={data.images}
-                    // setShowFullscreen={setShowFullscreen} 
-                    />
+                    <ImageSlider images={data.images}/>
 
                 </div>
             </div>
