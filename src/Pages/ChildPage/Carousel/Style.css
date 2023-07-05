@@ -265,12 +265,19 @@ button {
 }
 
 /* ===== CUSTOM BACKGROUND ======*/
+.image-slider{
+    background-color: #9b9583;
+}
 
 .about .image-slider {
     background-color: #b5c7c2;
 }
 
 .capstone .image-slider {
+    background-color: #9b9583;
+}
+
+.portfolio .image-slider {
     background-color: #9b9583;
 }
 

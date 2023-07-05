@@ -156,6 +156,10 @@
 
 
 /* custom background */
+.rightside{
+    color: white;
+}
+
 .about .rightside {
     background-color: #b5c7c2;
 }
@@ -176,6 +180,9 @@
     background-color: #4c7072;
 }
 
+.portfolio .rightside {
+    background-color: #9b9583;
+}
 
 /* 
 transitions
