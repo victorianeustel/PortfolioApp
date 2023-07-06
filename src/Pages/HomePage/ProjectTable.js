@@ -37,7 +37,7 @@ function ProjectTable(props) {
                             <td className="date">{event.data.year}</td>
                             <td id="preview-data">
                                 <div className="hide-image">
-                                    {/* <img src={event.data.headerImage} /> */}
+                                    <img src={event.data.headerImage} />
                                 </div>
                             </td>
                         </tr>
