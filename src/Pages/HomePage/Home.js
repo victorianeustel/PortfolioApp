@@ -3,11 +3,11 @@ import { ref, onValue } from "firebase/database";
 import { db } from "../../Database/storageConfig";
 
 import ProjectTable from "./ProjectTable.js";
-import Header from "./Header.js";
+import Header from "./Header/Index.js";
 import Loader from "../LoaderPage/Loader.js"
 
 import './HomePage.css';
-import '../../Styles/global.css';
+// import '../../Styles/global.css';
 
 function HomePage() {
     const [isDataLoaded, setIsDataLoaded] = useState(false);
@@ -34,16 +34,22 @@ function HomePage() {
         };
     }, []);
 
-    if (isDataLoaded ) {
+    if (isDataLoaded) {
         return (
 
             <div className="home-container">
-                    <div class="top">
-                        <Header />
-                    </div>
+                <div className="top">
+                    <Header data={data}/>
+                </div>
                 <div className="bottom">
                     <ProjectTable data={data} />
                 </div>
+                {/* <div class="top">
+                    <Header data={data} />
+                </div>
+                <div className="bottom">
+                    <ProjectTable data={data} />
+                </div> */}
             </div>
 
         )

@@ -1,0 +1,90 @@
+.header-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.header-description{
+    height: fit-content;
+    width: 50%;
+}
+
+.header-carousel {
+    width: 50%;
+}
+
+/*      HEADER */
+/* .header-container {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    overflow: hidden
+} */
+
+/* .header-left,
+.header-right {
+    width: 100vw;
+} */
+
+/* .header-left {
+    background-color: white;
+} */
+
+
+/* .header-right {
+    display: table-cell;
+    z-index: -2;
+} */
+
+.intro-description {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    font-size: 1.9rem;
+    text-align: left;
+}
+
+/* .header-right img {
+    object-fit: cover;
+    display: table-cell;
+    width: 100%;
+    object-position: top;
+} */
+
+.nav-list {
+    text-transform: lowercase;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.9rem;
+    padding-left: 1rem;
+}
+
+.nav-list a {
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-right: 0.25rem;
+}
+
+.nav-list a {
+    text-align: center;
+}
+
+.nav-list a:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+.nav-list a:visited {
+    text-decoration: none;
+}
+
+.nav-list a div {
+    margin-bottom: 0.3rem;
+    padding-right: 1rem;
+
+}
+
+#rarrow {
+    height: auto;
+    width: 1.75rem;
+    padding-right: 0.25rem;
+}

@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
 import { getDatabase } from "firebase/database";
+import { getAnalytics } from "firebase/analytics";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -14,7 +15,8 @@ const firebaseConfig = {
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_APP_ID,
-  databaseURL: "https://portfolioapp-aaa92-default-rtdb.firebaseio.com"
+  databaseURL: "https://portfolioapp-aaa92-default-rtdb.firebaseio.com",
+  // measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 
 // Initialize Firebase
@@ -22,6 +24,7 @@ const app = initializeApp(firebaseConfig);
 
  const storage = getStorage(app);
  const db = getDatabase(app);
+//  const analytics = getAnalytics(app);
 
  export {storage, db};
 

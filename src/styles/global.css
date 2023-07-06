@@ -2,16 +2,3 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
-
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-
-  /* 90% {
-        opacity: 0.2;
-    } */
-  100% {
-    opacity: 1;
-  }
-}
