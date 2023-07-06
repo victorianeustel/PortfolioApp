@@ -1,6 +1,7 @@
 import React from "react";
 import './HomePage.css'
 import { useNavigate } from "react-router-dom";
+import logo from '../../Data/header-art.jpg'
 
 
 function ProjectTable(props) {
@@ -10,31 +11,39 @@ function ProjectTable(props) {
 
     const routeChange = (key, name) => {
         let path = 'projects/' + key + "/" + name;
-        navigate(path, { state: { key: key }, params: {name: name}});
+        navigate(path, { state: { key: key }, params: { name: name } });
     }
 
     return (
         <table className="data-table">
             <thead>
                 <tr>
-                    <th id="name">Project</th>
-                    <th id="type">Type</th>
-                    <th id="location">Client</th>
-                    <th id="date">Date</th>
+                    <th className="name">Project</th>
+                    <th className="type">Type</th>
+                    <th className="location">Client</th>
+                    <th className="date">Date</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody> 
+
                 {data.map((event, key) => {
                     return (
-                        <tr key={key} onClick={() => routeChange(key, event.data.name)}>
-                            <td id="name">{event.data.name}</td>
-                            <td id="type">{event.data.type}</td>
-                            <td id="location">{event.data.client}</td>
-                            <td id="date">{event.data.year}</td>
+
+                        <tr key={key} onClick={() => routeChange(key, event.data.name)} className="preview">
+
+                            <td className="name">{event.data.name}</td>
+                            <td className="type">{event.data.type}</td>
+                            <td className="location">{event.data.client}</td>
+                            <td className="date">{event.data.year}</td>
+                            <td id="preview-data">
+                                <div className="preview-container">
+                                    <img src={event.data.headerImage} className="hide-image" />
+                                </div>
+                            </td>
                         </tr>
                     )
                 })}
-            </tbody>
+             </tbody> 
         </table>
     )
 }

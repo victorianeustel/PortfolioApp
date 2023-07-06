@@ -20,10 +20,35 @@
     animation: fadeInAnimation 0.75s linear;
 }
 
-.home-container{
+.home-container {
     animation: fadeInAnimation 0.75s linear;
-
+    /* position: relative; */
 }
+
+.hide-image {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    z-index: -1;
+    pointer-events: none;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+
+
+.preview:hover .hide-image {
+    display: block
+}
+
+#preview-data{
+    width: 0;
+}
+
+/* ===== */
 
 .top,
 .bottom {
@@ -53,6 +78,7 @@
 
 .header-right {
     display: table-cell;
+    z-index: -2;
 }
 
 
@@ -151,6 +177,7 @@ td {
 }
 
 .data-table tr {
+    z-index: 3;
     font-size: 20px;
 }
 
@@ -172,13 +199,13 @@ td:nth-of-type(3) {
     width: 20%;
 }
 
-#date {
+.date {
     text-align: right;
 }
 
-#name,
-#type,
-#location {
+.name,
+.type,
+.location {
     text-align: left;
 }
 
@@ -211,10 +238,11 @@ td:nth-of-type(3) {
         margin-bottom: 1rem;
     }
 
-    .intro-description, .nav-list {
+    .intro-description,
+    .nav-list {
         font-size: 1.5rem;
     }
-    
+
 
     .header-right img {
         width: 100%;
@@ -232,17 +260,17 @@ td:nth-of-type(3) {
         align-items: center;
     }
 
-    .data-table #type, #location {
+    .data-table .type,
+    .location {
         display: none;
     }
 
-    .data-table #name, #date {
+    .data-table .name,
+    .date {
         width: 50%;
     }
 
-    .data-table td{
+    .data-table td {
         font-size: 1rem;
     }
 }
-
-

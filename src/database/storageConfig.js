@@ -17,7 +17,6 @@ const firebaseConfig = {
   databaseURL: "https://portfolioapp-aaa92-default-rtdb.firebaseio.com"
 };
 
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
