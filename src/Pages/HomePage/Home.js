@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { ref, onValue } from "firebase/database";
 import { db } from "../../Database/storageConfig";
 
-import ProjectTable from "./ProjectTable.js";
-import Header from "./Header/Index.js";
+// import ProjectTable from "./ProjectTable.js";
+import ProjectTable from "./DataTable.js/DataTable";
+import Header from "./Header/Header.js";
 import Loader from "../LoaderPage/Loader.js"
 
 import './HomePage.css';
@@ -44,12 +45,6 @@ function HomePage() {
                 <div className="bottom">
                     <ProjectTable data={data} />
                 </div>
-                {/* <div class="top">
-                    <Header data={data} />
-                </div>
-                <div className="bottom">
-                    <ProjectTable data={data} />
-                </div> */}
             </div>
 
         )

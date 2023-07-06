@@ -1,8 +1,6 @@
 import React from "react";
-import './HomePage.css'
+import './DataTable.css'
 import { useNavigate } from "react-router-dom";
-import logo from '../../Data/header-art.jpg'
-
 
 function ProjectTable(props) {
     const { data } = props;
@@ -22,6 +20,7 @@ function ProjectTable(props) {
                     <th className="type">Type</th>
                     <th className="location">Client</th>
                     <th className="date">Date</th>
+                    <th id="preview-data"></th>
                 </tr>
             </thead>
             <tbody> 

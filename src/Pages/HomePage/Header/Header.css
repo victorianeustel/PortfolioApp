@@ -1,67 +1,39 @@
 .header-container{
     display: flex;
     flex-direction: row;
+
 }
 
 .header-description{
+    background-color: white;
     height: fit-content;
     width: 50%;
+    padding-left: 1rem;
+    padding-top: 1rem;
 }
 
 .header-carousel {
     width: 50%;
 }
 
-/*      HEADER */
-/* .header-container {
-    display: flex;
-    flex-direction: row;
-    height: fit-content;
-    overflow: hidden
-} */
-
-/* .header-left,
-.header-right {
-    width: 100vw;
-} */
-
-/* .header-left {
-    background-color: white;
-} */
-
-
-/* .header-right {
-    display: table-cell;
-    z-index: -2;
-} */
-
 .intro-description {
-    padding-left: 1rem;
-    padding-top: 1rem;
+
     font-size: 1.9rem;
     text-align: left;
 }
-
-/* .header-right img {
-    object-fit: cover;
-    display: table-cell;
-    width: 100%;
-    object-position: top;
-} */
 
 .nav-list {
     text-transform: lowercase;
     display: flex;
     flex-direction: row;
     font-size: 1.9rem;
-    padding-left: 1rem;
 }
 
 .nav-list a {
     color: black;
     display: flex;
     align-items: center;
-    margin-right: 0.25rem;
+    padding-right: 0.25em;
 }
 
 .nav-list a {
@@ -78,7 +50,7 @@
 }
 
 .nav-list a div {
-    margin-bottom: 0.3rem;
+    padding-bottom: 0.3rem;
     padding-right: 1rem;
 
 }
@@ -87,4 +59,15 @@
     height: auto;
     width: 1.75rem;
     padding-right: 0.25rem;
+}
+
+@media screen and (max-width:800px) {
+    .header-carousel{
+        display: none;
+    }
+
+    .header-description{
+        width: 100%;
+    }
+
 }

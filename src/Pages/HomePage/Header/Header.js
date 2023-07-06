@@ -1,11 +1,8 @@
 import React from "react";
-// import '../../HomePage.css';
 import '../HomePage.css';
-import './Style.css';
+import './Header.css';
 import LeftHeader from "../LeftHeader";
 import HeaderCarousel from "./HeaderCarousel/HeaderCarousel";
-// import LeftHeader from "../LeftHeader";
-// import logo from '../../Data/header-art.jpg'
 
 function Header(props) {
     const {data} = props;

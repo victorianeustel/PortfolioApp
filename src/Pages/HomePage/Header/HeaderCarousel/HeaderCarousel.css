@@ -3,41 +3,98 @@
     height: 100%;
     flex-direction: column;
     justify-content: flex-start;
-}
-
-.image-wrapper{
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
-.image-wrapper img{
-    object-fit: cover;
-    width: 100%;
-    height: 90%;
-}
-
-/* .header-image-wrapper {
-    display: flex;
     position: relative;
-    text-align: left;
-    overflow: hidden;
+    z-index: 0;
+    }
 
-    width: 45vw;
-    height: 30vw;
+.header-image-wrapper{
+    height: 100%;
+    width: 50vw;
+    position: relative;
+    min-height: 23em;
+    overflow: hidden;
+}
+
+.header-image-wrapper img{
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+    height: 100%; 
+    width: 100%;
+}
+
+#preview-caption{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 23% 30% 47%;
+    position: relative;
+}
+
+.header-carousel-arrows img{
+    padding-left: 1em;
+    width: 1em;
+}
+
+#caption-project-link img{
+    width: 1em;
+    padding-right: 0.25em;
+}
+
+#caption-project-link:hover{
+    opacity: 50%;
+}
+
+#caption-project-link {
+    color: black;
+    text-decoration: none;
+}
+
+.header-prev:hover, .header-next:hover {
+    cursor: pointer;
+    opacity: 50%;
+}
+
+#preview-caption div{
+    padding-top: 0.5em;
+}
+
+#carousel-project{
+    font-weight: 500;
+}
+
+/* ===== CAROUSEL TRANSITIONS ======*/
+.slide-right-enter {
+    transform: translateX(100%);
+}
+
+.slide-right-enter-active {
+    transform: translateX(0%);
     transition: transform 300ms ease-in-out;
 }
 
-.header-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    display: block; 
-    position: absolute;
-    object-fit: fit;
-    user-select: none;
-} */
-
-#preview-caption{
-    
+.slide-right-exit {
+    transform: translateX(0%);
 }
 
+.slide-right-exit-active {
+    transform: translateX(-100%);
+    transition: transform 300ms ease-in-out;
+}
+
+.slide-left-enter {
+    transform: translateX(-100%);
+}
+
+.slide-left-enter-active {
+    transform: translateX(0%);
+    transition: transform 300ms ease-in-out;
+}
+
+.slide-left-exit {
+    transform: translateX(0%);
+}
+
+.slide-left-exit-active {
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+}

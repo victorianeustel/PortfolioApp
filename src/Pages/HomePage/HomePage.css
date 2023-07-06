@@ -13,145 +13,14 @@
 /////// DESKTOP CSS ///////
 */
 
-.flex-container {
-
-    animation: fadeInAnimation 0.75s linear;
-}
-
 .home-container {
     display: grid;
     height: 100%;
+    animation: fadeInAnimation 0.75s linear;
 }
 
 .top {
-    padding-bottom: 5%;
-    z-index: -1;
-}
-
-.bottom{
-    padding: 1em;
-}
-
-.left-header{
-    padding-bottom: 10em;
-}
-
-.data-table {
-    width: 100%;
-    height: auto;
-    border-spacing: 0;
-    border-collapse: collapse;
-    /* margin-left: 1rem;
-    margin-right: 1rem; */
-}
-
-.data-table th,
-td {
-    border-bottom: 1px solid #000000;
-}
-
-.data-table th {
-    font-size: 15px;
-    color: #8a8a8a;
-    font-weight: 400;
-    text-transform: uppercase;
-    padding-bottom: 0.5rem;
-}
-
-.data-table td {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-}
-
-.data-table {
-    z-index: 1;
-}
-
-.data-table tr {
-    /* z-index: 1; */
-    font-size: 20px;
-}
-
-.data-table tr:hover {
-    cursor: pointer;
-}
-
-/* only highlight the first column on hover*/
-.data-table tr:hover td:nth-of-type(1) {
-    color: #636363;
-}
-
-.data-table tr td:nth-of-type(1) {
-    width: 50%;
-}
-
-.data-table tr td:nth-of-type(2),
-td:nth-of-type(3) {
-    width: 20%;
-}
-
-.date {
-    text-align: right;
-}
-
-.name,
-.type,
-.location {
-    text-align: left;
-}
-
-/*
-preview image
-*/
-
-.hide-image {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 50%;
-    z-index: -1;
-    pointer-events: none;
-    height: 100%;
-    object-fit: cover;
-    display: none;
-}
-
-.idlegame .hide-image   {
-    background-color: #638482;
-}
-
-.portfolio .hide-image {
-    background-color: #dbd4b7;
-
-}
-
-.jobapp .hide-image {
-    background-color: #aea5ba;
-
-}
-
-.wordle .hide-image {
-    background-color: #efe3b3;
-
-}
-
-.capstone .hide-image {
-    background-color: #638482;
-
-}
-
-.preview:hover .hide-image {
-    display: block
-}
-
-.hide-image img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-#preview-data{
-    width: 0;
+    padding-bottom: 5em;
 }
 
 
@@ -161,33 +30,28 @@ preview image
 */
 
 @media screen and (max-width:800px) {
-    .flex-container {
+    .home-container {
         display: flex;
         flex-direction: column;
         height: 100vh;
-    }
-
-    .header-container {
-        flex-direction: column;
+        animation: fadeInAnimation 0.75s linear;
     }
 
     .top,
     .bottom {
         height: fit-content;
-        width: 100vw;
+        width: 100%;
     }
 
-    .header-left {
-        width: 100vw;
-        height: fit-content;
-        margin-bottom: 1rem;
+    .top {
+        padding-bottom: 1em
     }
+
 
     .intro-description,
     .nav-list {
         font-size: 1.5rem;
     }
-
 
     .header-right img {
         width: 100%;
@@ -197,12 +61,6 @@ preview image
         align-items: center;
         object-position: center;
         object-fit: cover;
-    }
-
-    .bottom {
-        margin-top: 1rem;
-        display: flex;
-        align-items: center;
     }
 
     .data-table .type,
