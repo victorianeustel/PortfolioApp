@@ -273,14 +273,13 @@ transitions
     }
 
     .image-list img {
-        width: 80%;
-        margin-bottom: 1rem;
-        box-shadow: 3px 3px 10px 7px rgb(228, 228, 228);
+        width: 100%;
+        /* box-shadow: 3px 3px 10px 7px rgb(228, 228, 228); */
         ;
     }
 
     .image-list-item {
-        margin-top: 1rem;
+        /* margin-top: 1rem; */
         text-align: center;
     }
 
@@ -291,6 +290,10 @@ transitions
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .image-list-caption{
+        padding-bottom: 1em;
     }
 
     .social-bar {
@@ -305,15 +308,12 @@ transitions
         font-size: 1rem;
     }
 
-    .info-table {
-        margin-bottom: 2rem;
-    }
-
     .info-table tr td:nth-of-type(1) {
         width: 30%;
     }
 
     .description-box {
         font-size: 1.4rem;
+        margin-bottom: 0;
     }
 }

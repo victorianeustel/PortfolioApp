@@ -123,3 +123,9 @@ Custom preview colors
     background-color: #638482;
 
 }
+
+@media screen and (max-width:800px) {
+    .preview:hover .hide-image{
+        display: none;
+    }
+}

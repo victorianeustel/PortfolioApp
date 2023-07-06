@@ -34,7 +34,7 @@ function Details(props) {
                     return (
                         <div key={key} className="image-list-item">
                             <img src={item.link} alt={item.description}></img>
-                            <div> {item.description}</div>
+                            <div className="image-list-caption"> {item.description}</div>
                         </div>
                     )
                 })}
