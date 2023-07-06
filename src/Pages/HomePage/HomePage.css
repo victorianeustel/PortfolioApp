@@ -26,7 +26,7 @@
 }
 
 .hide-image {
-    background-color: white;
+    /* background-color: rgb(146, 52, 52); */
     position: fixed;
     top: 0;
     right: 0;
@@ -38,10 +38,38 @@
     display: none;
 }
 
+.idlegame .hide-image   {
+    background-color: #638482;
+}
 
+.portfolio .hide-image {
+    background-color: #dbd4b7;
+
+}
+
+.jobapp .hide-image {
+    background-color: #aea5ba;
+
+}
+
+.wordle .hide-image {
+    background-color: #efe3b3;
+
+}
+
+.capstone .hide-image {
+    background-color: #638482;
+
+}
 
 .preview:hover .hide-image {
     display: block
+}
+
+.hide-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 #preview-data{
@@ -272,5 +300,9 @@ td:nth-of-type(3) {
 
     .data-table td {
         font-size: 1rem;
+    }
+
+    .preview:hover .hide-image {
+        display: none;
     }
 }

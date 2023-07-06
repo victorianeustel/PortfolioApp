@@ -29,15 +29,15 @@ function ProjectTable(props) {
                 {data.map((event, key) => {
                     return (
 
-                        <tr key={key} onClick={() => routeChange(key, event.data.name)} className="preview">
+                        <tr key={key} onClick={() => routeChange(key, event.data.name)} className={`preview ${event.data.id}`}>
 
                             <td className="name">{event.data.name}</td>
                             <td className="type">{event.data.type}</td>
                             <td className="location">{event.data.client}</td>
                             <td className="date">{event.data.year}</td>
                             <td id="preview-data">
-                                <div className="preview-container">
-                                    <img src={event.data.headerImage} className="hide-image" />
+                                <div className="hide-image">
+                                    {/* <img src={event.data.headerImage} /> */}
                                 </div>
                             </td>
                         </tr>
