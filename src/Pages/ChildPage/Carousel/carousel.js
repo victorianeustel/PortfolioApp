@@ -1,4 +1,4 @@
-import './Style.css';
+import './Carousel.css';
 import React, { useState } from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import leftarrow from '../../../Assets/Arrows/arrow-left-white.svg';
@@ -20,20 +20,19 @@ export default function ImageSlider(props) {
         const newIndex = index - 1;
         setIndex(newIndex < 0 ? images.length - 1 : newIndex);
         setDirection("slide-left");
-
     };
 
     const handleNext = () => {
         const newIndex = index + 1;
         setIndex(newIndex >= images.length ? 0 : newIndex);
         setDirection("slide-right");
-
     };
 
     const childFactory = (direction) => (child) =>
         React.cloneElement(child, {
             classNames: direction,
         });
+        
 
     return (
         <CSSTransition
@@ -45,7 +44,7 @@ export default function ImageSlider(props) {
             classNames="test"
         >
             <div className={`image-slider fullscreen-${showFullscreen}`}>
-                {images.length != 1
+                {images.length !==1
                     ?
                     <div class="slider-button-container">
                         <div
@@ -66,7 +65,7 @@ export default function ImageSlider(props) {
                 }
                 {showFullscreen ?
                     <button id="exit-fullscreen" onClick={handleFullScreen}>
-                        <img src={x} />
+                        <img alt="exit fullscreen" src={x} />
                     </button>
                     :
                     null
@@ -86,7 +85,7 @@ export default function ImageSlider(props) {
                         {!showFullscreen
                             ?
                             <button id="showFullscreen" onClick={handleFullScreen}>
-                                <img src={leftarrow} className="small-arrow" />
+                                <img alt="full screen button" src={leftarrow} className="small-arrow" />
                                 Fullscreen
                             </button>
                             :

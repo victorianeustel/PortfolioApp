@@ -1,6 +1,11 @@
-//preload images 
+/*========================== 
+Preloading Images (caching)
+========================== */
+
 const cacheImages = async (srcArray, setIsImagesLoaded) => {
+
     const promises = await srcArray.map((src) => {
+
         return new Promise(function (resolve, reject) {
             const img = new Image();
             
@@ -8,10 +13,13 @@ const cacheImages = async (srcArray, setIsImagesLoaded) => {
             img.onload = resolve();
             img.onerror = reject();
         });
+        
     });
+
     await Promise.all(promises);
 
     setIsImagesLoaded(true);
+    
 };
 
-export default cacheImages
+export default cacheImages;

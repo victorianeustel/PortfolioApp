@@ -14,7 +14,6 @@ function HeaderCarousel(props) {
         const newIndex = index - 1;
         setIndex(newIndex < 0 ? projects.length - 1 : newIndex);
         setDirection("slide-left");
-
     };
 
     const handleNext = () => {
@@ -22,7 +21,6 @@ function HeaderCarousel(props) {
         const newIndex = index + 1;
         setIndex(newIndex >= projects.length ? 0 : newIndex);
         setDirection("slide-right");
-
     };
 
     const childFactory = (direction) => (child) =>
@@ -48,11 +46,11 @@ function HeaderCarousel(props) {
             <div className="header-image-wrapper">
                 <TransitionGroup childFactory={childFactory(direction)}>
                     <CSSTransition
-                        key={projects[index].data.id}
+                        key={projects[index].id}
                         timeout={1000}
                         classNames={direction}
                     >
-                        <img alt="" src={projects[index].data.headerImage} />
+                        <img alt="" src={projects[index].headerImage} />
                     </CSSTransition>
                 </TransitionGroup>
             </div>
@@ -64,21 +62,21 @@ function HeaderCarousel(props) {
                 <div className='header-carousel-arrows'>
 
                     <button onClick={handlePrevious} className='header-prev'>
-                        <img src={leftArrow} />
+                        <img alt="previous carousel arrow" src={leftArrow} />
                     </button>
 
                     <button onClick={handleNext} className='header-next'>
-                        <img src={rightArrow} />
+                        <img alt="next carousel arrow" src={rightArrow} />
                     </button>
 
                 </div>
 
 
                 <div >
-                    {projects[index].data.name}
+                    {projects[index].name}
                     <br />
-                    <a href={`/projects/${index}/${projects[index].data.name}`} id='caption-project-link'>
-                        <img src={rightArrow} />
+                    <a href={`/projects/${index}/${projects[index].name}`} id='caption-project-link'>
+                        <img alt="project link"src={rightArrow} />
                         Open Project
                     </a>
                 </div>

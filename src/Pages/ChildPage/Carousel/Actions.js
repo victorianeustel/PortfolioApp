@@ -1,4 +1,4 @@
-import "./Style.css"
+import "./Carousel.css"
 
 function HandlePrevious(props) {
 

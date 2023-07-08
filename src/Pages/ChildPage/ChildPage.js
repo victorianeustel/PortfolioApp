@@ -1,15 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import NotFound from "../NotFound/notfound";
 import InfoPage from "./Info/Info";
 import Loader from "../LoaderPage/Loader";
-import cacheImages from "../../Actions/cacheImages";
-import ImageSlider from "./Carousel/carousel";
+// import cacheImages from "../../Actions/cacheImages";
+import ImageSlider from "./Carousel/Carousel";
 
-import { db } from "../../Database/storageConfig";
-import { ref, get } from "firebase/database";
+import FetchData from "../../Database/Database";
 
 import './childpage.css';
 import '../../Styles/global.css';
@@ -19,60 +16,15 @@ import useDocumentTitle from "../../Actions/useDocumentTitle";
 function ChildPage() {
     const { id, name } = useParams();
 
-    const [data, setData] = useState();
-    const [error, setError] = useState();
-    const [isImagesLoaded, setIsImagesLoaded] = useState(false);
-    const [isDataLoaded, setIsDataLoaded] = useState(false);
-    const [showFullscreen, setShowFullscreen] = useState(false);
-
     useDocumentTitle(name + ' - Victoria Neustel');
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const snapshot = await get(ref(db, 'data/' + id));
-                const aboutVal = await snapshot.val();
+    const data = FetchData(`data/${id}`);
 
-                setData(aboutVal);
-                setIsDataLoaded(true);
-            }
-            catch (e) {
-                return (
-                    <NotFound />
-                )
-            }
-        }
-
-        fetchData();
-
-    }, [])
-
-    useEffect(() => {
-        if (isDataLoaded) {
-            let imgsArr = [];
-            data.images.map(({ link, description }) => {
-                return (
-                    imgsArr.push(link))
-            })
-            cacheImages(imgsArr, setIsImagesLoaded);
-        }
-    }, [isDataLoaded]);
-
-    if (error != null) {
-        return <NotFound></NotFound>
+    if (data == null){
+        return <Loader />
     }
 
-    else if (!isDataLoaded || !isImagesLoaded
-    ) {
-        return (
-            <Loader />
-        )
-    }
-
-    else {
-        return (
-
-
+    return (
             <div className={`flex-container ${data.id}`}>
                 <div class="leftside">
 
@@ -88,7 +40,6 @@ function ChildPage() {
             </div>
 
         )
-    }
 }
 
 export default ChildPage;

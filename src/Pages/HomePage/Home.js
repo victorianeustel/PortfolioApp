@@ -1,63 +1,38 @@
-import React, { useEffect, useState } from "react";
-import { ref, onValue } from "firebase/database";
-import { db } from "../../Database/storageConfig";
+import React from "react";
 
-// import ProjectTable from "./ProjectTable.js";
-import ProjectTable from "./DataTable.js/DataTable";
+import ProjectTable from "./DataTable/DataTable";
 import Header from "./Header/Header.js";
 import Loader from "../LoaderPage/Loader.js"
 
+import FetchData from "../../Database/Database";
+import useDocumentTitle from "../../Actions/useDocumentTitle";
+
 import './HomePage.css';
-// import '../../Styles/global.css';
 
 function HomePage() {
-    const [isDataLoaded, setIsDataLoaded] = useState(false);
-    const [data, setData] = useState();
 
-    useEffect(() => {
+    useDocumentTitle('Victoria Neustel')
+  
+    const data = FetchData('data');
 
-        const dbRef = ref(db, 'data');
+    if (data == null) {
+        return <Loader />
+    }
 
-        function fetchData(snapshot) {
-            let records = [];
-            snapshot.forEach((childSnapshot) => {
-                let keyName = childSnapshot.key;
-                let data = childSnapshot.val();
-                records.push({ key: keyName, data: data });
-            });
-            setData(records);
-            setIsDataLoaded(true);
-        };
-        const handleData = onValue(dbRef, fetchData);
+    else {return (
+        <div className="home-container">
 
-        return () => {
-            handleData(); // Clean up the event listener when the component unmounts
-        };
-    }, []);
-
-    if (isDataLoaded) {
-        return (
-
-            <div className="home-container">
-                <div className="top">
+            <div className="top">
                     <Header data={data}/>
                 </div>
-                <div className="bottom">
-                    <ProjectTable data={data} />
-                </div>
+
+            <div className="bottom">
+                <ProjectTable data={data} />
             </div>
 
-        )
-    }
+        </div>
 
-    else {
-        return (
-
-            <Loader />
-
-        )
-    }
-
+    )}
 
 }
 

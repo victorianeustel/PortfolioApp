@@ -1,36 +1,21 @@
 import React from "react";
-import '../ChildPage/childpage.css'
+
 import InfoPage from "../ChildPage/Info/Info";
-import Carousel from "../ChildPage/Carousel/carousel";
-import { useState, useEffect } from "react";
-import { ref, get } from "firebase/database";
-import { db } from "../../Database/storageConfig";
+import Carousel from "../ChildPage/Carousel/Carousel";
 import Loader from "../LoaderPage/Loader";
 
+import FetchData from "../../Database/Database";
 import useDocumentTitle from "../../Actions/useDocumentTitle";
+
+import '../ChildPage/childpage.css'
 
 function About() {
     useDocumentTitle('About - Victoria Neustel');
-    const [about, setAbout] = useState();
-    const [isLoaded, setIsLoaded] = useState(false);
 
-    useEffect(() => {
-        const fetchAbout = async () => {
+    const about = FetchData(`about`);
 
-            const snapshot = await get(ref(db, 'about'));
-            const aboutVal = await snapshot.val();
-
-            setAbout(aboutVal);
-            setIsLoaded(true);
-        }
-
-        fetchAbout();
-    }, [])
-
-    if (!isLoaded) {
-        return (
-            <Loader />
-        )
+    if (about == null){
+        return <Loader />
     }
     
     return (

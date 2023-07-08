@@ -1,7 +1,11 @@
-// change document title (tab-title)
+
+/*================================= 
+Changing Document Title (Tab Title)
+================================= */
 import { useRef, useEffect } from 'react'
 
 function useDocumentTitle(title) {
+
   const defaultTitle = useRef(document.title);
   const prevailOnUnmount = false;
 
@@ -14,6 +18,7 @@ function useDocumentTitle(title) {
       document.title = defaultTitle.current;
     }
   }, [])
+  
 }
 
 export default useDocumentTitle
