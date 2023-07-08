@@ -1,6 +1,8 @@
 import React from "react";
 import './HomePage.css'
+import '../../Styles/global.css'
 import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { downloadPDF } from "../../Actions/downloadPDF";
 
 function LeftHeader() {
 
@@ -19,6 +21,12 @@ function LeftHeader() {
                         About
                     </div>
                 </a>
+                <div onClick={downloadPDF}>
+                    <ArrowRightIcon id="rarrow" />
+                    <div>
+                        Resume
+                    </div>
+                </div>
 
                 <a href="mailto:victoria.neustel@outlook.com">
                     <ArrowRightIcon id="rarrow" />

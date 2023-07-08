@@ -29,18 +29,19 @@
     font-size: 1.9rem;
 }
 
-.nav-list a {
+.nav-list a, .nav-list div {
     color: black;
     display: flex;
     align-items: center;
     padding-right: 0.25em;
+    text-decoration: underline;
 }
 
-.nav-list a {
+.nav-list a, .nav-list div {
     text-align: center;
 }
 
-.nav-list a:hover {
+.nav-list a:hover, .nav-list div:hover {
     cursor: pointer;
     color: gray;
 }
@@ -49,10 +50,9 @@
     text-decoration: none;
 }
 
-.nav-list a div {
+.nav-list a div, .nav-list div div {
     padding-bottom: 0.3rem;
     padding-right: 1rem;
-
 }
 
 #rarrow {

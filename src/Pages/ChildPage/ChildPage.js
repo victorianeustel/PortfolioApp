@@ -9,7 +9,6 @@ import ImageSlider from "./Carousel/Carousel";
 import FetchData from "../../Database/Database";
 
 import './childpage.css';
-import '../../Styles/global.css';
 
 import useDocumentTitle from "../../Actions/useDocumentTitle";
 
