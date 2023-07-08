@@ -3,30 +3,13 @@ import React, { useState, useEffect } from 'react';
 import './HeaderCarousel.css';
 import leftArrow from '../../../../Assets/Arrows/arrow-left.svg';
 import rightArrow from '../../../../Assets/Arrows/arrow.svg';
+import { HandleNext, HandlePrevious, childFactory } from '../../../../Actions/carouselActions';
 
 function HeaderCarousel(props) {
     const { projects } = props;
 
     const [index, setIndex] = useState(0);
     const [direction, setDirection] = useState("slide-right");
-
-    const handlePrevious = () => {
-        const newIndex = index - 1;
-        setIndex(newIndex < 0 ? projects.length - 1 : newIndex);
-        setDirection("slide-left");
-    };
-
-    const handleNext = () => {
-        console.log("handling next");
-        const newIndex = index + 1;
-        setIndex(newIndex >= projects.length ? 0 : newIndex);
-        setDirection("slide-right");
-    };
-
-    const childFactory = (direction) => (child) =>
-        React.cloneElement(child, {
-            classNames: direction,
-        });
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -61,18 +44,18 @@ function HeaderCarousel(props) {
                 </div>
                 <div className='header-carousel-arrows'>
 
-                    <button onClick={handlePrevious} className='header-prev'>
+                    <button onClick={() => {setIndex(HandlePrevious(index, projects.length)); setDirection("slide-left")}} className='header-prev'>
                         <img alt="previous carousel arrow" src={leftArrow} />
                     </button>
 
-                    <button onClick={handleNext} className='header-next'>
+                    <button onClick={() => {setIndex(HandleNext(index, projects.length)); setDirection("slide-right")}} className='header-next'>
                         <img alt="next carousel arrow" src={rightArrow} />
                     </button>
 
                 </div>
 
 
-                <div >
+                <div id='open-project'>
                     {projects[index].name}
                     <br />
                     <a href={`/projects/${index}/${projects[index].name}`} id='caption-project-link'>

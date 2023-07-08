@@ -105,4 +105,15 @@
         margin-top: 1em;
     }
 
+    #preview-caption{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% 30% 40%;
+        position: relative;
+    }
+
+    #open-project{
+        height: 3em;
+    }
+
 }

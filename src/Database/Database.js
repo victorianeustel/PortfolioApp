@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { ref, get } from "firebase/database";
 import { db } from "./storageConfig";
-import cacheImages from "../Actions/cacheImages";
 
 export default function FetchData(path) {
 
@@ -26,18 +25,3 @@ export default function FetchData(path) {
         return data;
     }
 }
-
-// function cacheImages(){
-//     const 
-
-//         useEffect(() => {
-//         if (isDataLoaded) {
-//             let imgsArr = [];
-//             data.images.map(({ link, description }) => {
-//                 return (
-//                     imgsArr.push(link))
-//             })
-//             cacheImages(imgsArr, setIsImagesLoaded);
-//         }
-//     }, [isDataLoaded]);
-// }

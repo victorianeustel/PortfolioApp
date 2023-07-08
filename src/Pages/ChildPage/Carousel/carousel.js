@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import leftarrow from '../../../Assets/Arrows/arrow-left-white.svg';
 import x from '../../../Assets/Arrows/x-white.svg';
+import { HandlePrevious, HandleNext, childFactory } from '../../../Actions/carouselActions';
 
 
 export default function ImageSlider(props) {
@@ -16,24 +17,6 @@ export default function ImageSlider(props) {
         setShowFullscreen((current) => !current);
     }
 
-    const handlePrevious = () => {
-        const newIndex = index - 1;
-        setIndex(newIndex < 0 ? images.length - 1 : newIndex);
-        setDirection("slide-left");
-    };
-
-    const handleNext = () => {
-        const newIndex = index + 1;
-        setIndex(newIndex >= images.length ? 0 : newIndex);
-        setDirection("slide-right");
-    };
-
-    const childFactory = (direction) => (child) =>
-        React.cloneElement(child, {
-            classNames: direction,
-        });
-        
-
     return (
         <CSSTransition
             //1. state (enter/exit - boolean)
@@ -44,18 +27,17 @@ export default function ImageSlider(props) {
             classNames="test"
         >
             <div className={`image-slider fullscreen-${showFullscreen}`}>
-                {images.length !==1
+                {images.length !== 1
                     ?
                     <div class="slider-button-container">
                         <div
-                            onClick={handlePrevious}
+                            onClick={() => { setIndex(HandlePrevious(index, images.length)); setDirection("slide-left") }}
                             className="slider-button prev"
                             role="button"
                             aria-label="Next slide"
                         />
                         <div
-                            onClick={handleNext}
-                            className='slider-button next'
+                            onClick={() => { setIndex(HandleNext(index, images.length)); setDirection("slide-right") }} className='slider-button next'
                             role='button'
                             aria-label='Prev slide'
                         />
@@ -72,14 +54,12 @@ export default function ImageSlider(props) {
 
                 }
 
-
                 <div className='image-column'>
 
                     <div id='image-header' >
                         {images.length !== 1
                             ? <>{index + 1} / {images.length}</>
                             : null
-
                         }
 
                         {!showFullscreen
@@ -90,7 +70,6 @@ export default function ImageSlider(props) {
                             </button>
                             :
                             null
-
                         }
 
                     </div>
